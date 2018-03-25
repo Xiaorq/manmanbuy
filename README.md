@@ -3,7 +3,7 @@
 
 # git协作开发
 ### 准备工作
-1. 新建一个文件夹，然后克隆仓库 git clone -b dev git@github.com:Organ-manmanbuy/manmanbuy.git
+1. 新建一个文件夹，然后克隆仓库 git clone -b dev https://github.com/Organ-manmanbuy/manmanbuy.git
 2. 转到开发分支 git checkout dev
 
 ### 提交代码
