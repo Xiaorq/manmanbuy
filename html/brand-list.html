@@ -28,8 +28,96 @@
     </div>
 </header>
 
+<main id="main" class="mui-scroll-wrapper">
+    <div class="mui-scroll">
+        <div class="topbar" id="topbar">
+            <a href="../index.html">首页</a>
+            <span>></span>
+            <a href="brand.html">品牌大全</a>
+            <span>></span>
+            <a href="javascript:"><span class="brand-title"></span>哪个牌子好</a>
+        </div>
+        <div class="container">
 
+            <section class="brand-sort">
+                <div class="topbar"><span class="brand-title"></span>哪个牌子好</div>
+                <ul class="brand-sortList">
 
+                </ul>
+            </section>
+
+            <section class="ad">
+                <a href="javascript:" >
+                    <img src="../images/brand-list-ad.png">
+                </a>
+            </section>
+
+            <section class="product-sort">
+                <div class="topbar">
+                    <span class="brand-title"></span>产品销量排行
+                </div>
+                <ul class="product-sortList">
+
+                </ul>
+            </section>
+
+            <section class="comment">
+                <div class="topbar">
+                    <span class="brand-title"></span>最有用的用户评论
+                </div>
+                <ul class="comment-list"></ul>
+            </section>
+
+        </div>
+        <!--脚部-->
+        <footer id="footer">
+            <div class="topbar">
+                <span class="login">登录</span>
+                <span class="register">注册</span>
+                <span class="returnTop"><a href="#topbar">返回顶部</a></span>
+            </div>
+            <div class="bottombar">
+                <div>
+                    <span class="app">手机APP下载</span>
+                    <a href="../index.html">慢慢买手机版-掌上比价平台</a>
+                </div>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </footer>
+    </div>
+</main>
+
+<!--template-->
+<script id="brandItemTemp" type="text/html">
+{{each result as value i}}
+<li class="brand-item">
+    <div class="left">{{i+1}}</div>
+    <div class="right fa fa-chevron-right">
+        <div class="brand-name">{{value.brandName}}</div>
+        <div class="brand-info">{{value.brandInfo}}</div>
+    </div>
+</li>
+{{/each}}
+</script>
+<script id="productItemTemp" type="text/html">
+{{each result as value i}}
+<li class="product-item">
+    <div class="left">{{#value.productImg}}</div>
+    <div class="right">
+        <div class="name">{{value.productName}}</div>
+        <div>
+            <span class="price">{{value.productPrice}}</span>
+            <span class="stars"></span>
+        </div>
+        <div class="footer">
+            <span class="quote">{{value.productQuote}}</span>
+            <span class="productCom">{{value.productCom}}</span>
+        </div>
+    </div>
+</li>
+
+{{/each}}
+</script>
 
 <script src="../lib/artTemplate/template.js"></script>
 <script src="../lib/zepto/zepto.min.js"></script>
@@ -38,3 +126,4 @@
 
 </body>
 </html>
+

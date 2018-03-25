@@ -85,4 +85,54 @@ ul {
 #main {
   padding-top: 105px;
   height: 100%;
+  >.mui-scroll {
+    min-height: 101%;
+    >.topbar {
+      padding-left: 10px;
+      height: 36px;
+      //background: linear-gradient(to bottom,#fff,#ebebeb);
+      border-bottom: 1px solid #ddd;
+      >a {
+        font-size: 14px;
+        color: #000;
+        height: 36px;
+        line-height: 36px;
+      }
+    }
+
+  }
+}
+
+#footer {
+  >.topbar {
+    display: flex;
+    border-top: 1px solid #ccc;
+    >span {
+      flex:1;
+      text-align: center;
+      height: 34px;
+      line-height: 34px;
+    }
+    >.returnTop {
+      >a {
+        color: #000;
+      }
+    }
+  }
+  >.bottombar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    .app {
+      color: @c;
+      font-size: 14px;
+    }
+    a {
+      color: #888;
+      font-size: 14px;
+
+    }
+  }
 }
