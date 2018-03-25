@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>慢慢买折扣详情页面</title>
+    <!-- 1. 添加移动端的视口 -->
+    <!-- meta:vp +tab -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    <!-- 1. 引包先引入第三方的包  如果有依赖要先引入依赖再引入不依赖 -->
+    <!-- 1. 引入字体图标的样式文件 -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 2. 引入mui的样式文件 -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <!-- 1. 引入less的时候可以直接引入 但是rel="stylesheet/less" -->
+    <link rel="stylesheet/less" href="../less/discount-detail.less">
+    <!-- 2. 引入less.js编译器文件 （专门在浏览器里面去临时编译less）  less.js需要在less文件后面引入 但是不能放在body后面 因为less.js是需要编译less来生成css会影响页面渲染 -->
+    <!-- js通常是放在body结束标签的上面 但是有一些js要放到head里面（对页面渲染有影响） -->
+    <script src="../lib/less/less.js"></script>
+</head>
+    
+<body>
+        <header>
+                <div class="left">
+                    <a href="" class="fa fa-arrow-left"></a>
+                </div>
+                <span>优惠券</span>
+                <div class="right"><a href=""><img src="../images/header_app.png" alt=""></a></div>
+            </header>
+        <!-- 主体商品开始 -->
+        <main id="main">
+           <div class="product-detail">
+               <div class="conter">
+                    <h4>【淳念】夏季纯棉宽松卡通家居服睡裙</h4>
+                    <p>券后39.00元包邮</p>
+                    <div class="info">
+                        <span class="mall">天猫商城</span>
+                        <span class="addTime">03-25 15:37</span>
+                        <span class="auther"> 爬爬小蟹1 / 慢慢买</span>
+                    </div>
+                    <ul class="mui-table-view">
+                        <li class="mui-table-view-cell mui-media">
+                            <a href="javascript:;">
+                                <img class="mui-media-object mui-pull-right" src="../images/discoundt-productlist-01.jpg">
+                                <div class="mui-media-body">
+                                【天猫正品】甜美公主裙睡衣，宽松棉质家居服，外穿棉100%面料材质成分，宽松版型，舒适随心，甜美可爱范，清新如你【赠运费险】 
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+               </div>
+           </div>
+           <div class="btn-go">
+                <ul class="mui-table-view"> 
+                    <li class="mui-table-view-cell mui-collapse">
+                        <a class="" href="javascript:;">前往购买</a>
+                        <div class="mui-collapse-content">
+                            <p>测试地址</p>
+                        </div>
+                    </li>
+                </ul>
+           </div>
+           <div class="comment">
+               <div class="pinlun">发表评论</div>
+               <form action="#">
+                    <textarea></textarea>
+                    <input type="button" value="发表评论">
+               </form>
+               <div class="new-pinlun">最新评论</div>
+               
+        </main>
+        <!-- 主体商品结束 -->
+        <!-- 底部开始 -->
+        <footer id="footer">
+            <ul class="clearfloat">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li><a href="#header">回到顶部</a></li>
+            </ul>
+            <div class="footer-down">
+                <p><a href="#">手机APP下载</a><a href="#">慢慢买手机版</a> -- 掌上比价平台</p>
+                <p> m.manmanbuy.com </p>
+            </div>
+        </footer>
+        <!-- 底部结束 -->
+
+        <!-- 创建产品模板开始 -->
+        <script type="text/html" id="productList">
+           
+        </script>
+       
+        <!-- 创建产品模板结束 -->
+    
+    
+   
+    <!-- js在body结束标签的上面引入 -->
+    <!-- 3. 引入mui的js文件 -->
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <!-- 4. 引入zepto的js文件 -->
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <!-- 5. 引入模板引擎的js文件 -->
+    <script src="../lib/artTemplate/template.js"></script>
+    <!-- 6. 引入自己写的js文件  -->
+    <script src="../js/discount-detail.js"></script>
+</body>
+
+</html>
