@@ -96,6 +96,8 @@
     <script src="../lib/zepto/zepto.min.js"></script>
     <!-- 5. 引入模板引擎的js文件 -->
     <script src="../lib/artTemplate/template.js"></script>
+    <!-- 引入animate的css -->
+    <link rel="stylesheet" href="./../lib/animate/animate.min.css">
     <!-- 6. 引入自己写的js文件  -->
     <script src="../js/mall-nav.js"></script>
 
@@ -106,7 +108,7 @@
 <script type="text/html" id="web">
     {{each result as value i}}
 
-    <div class="sites">
+    <div class="sites zoomIn animated">
         <a href="{{value.navHref}}">
             <img src="{{value.navImg}}" alt=""><span>{{value.navTitle}}</span> 
         </a>
