@@ -27,18 +27,19 @@
             </a>
         </div>
         <div class="appdown">
-            <a href="#">
+            <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">
                 <img src="./images/header_app.png" alt="">
             </a>
         </div>
     </header>
+    <section id="searchbox">
+        <form class="search">
+            <input type="text" placeholder="请输入你想比价的商品" class="searchtxt">
+            <input type="submit" class="searchbtn" value="搜索">
+            <form>
+    </section>
     <main id="main">
-        <section id="searchbox">
-            <form class="search">
-                <input type="text" placeholder="请输入你想比价的商品" class="searchtxt">
-                <input type="submit" class="searchbtn" value="搜索">
-                <form>
-        </section>
+        
         <nav id="nav">
             <div class="mui-container">
                 <div class="mui-row"></div>
@@ -52,16 +53,31 @@
         </section>
         <section id="product">
             <div class="mui-container">
-                
+
             </div>
         </section>
     </main>
     <footer id="footer">
+        <section id="more">
+            <a href="./html/moneyctrl.html">更多优惠信息>></a>
+        </section>
+        <section id="brand">
+            <div class="brand-title">
+                <span>品牌折扣</span>
+                <a href="javascript:;" class="  fa fa-arrow-circle-o-right"></a>
+            </div>
+        </section>
         <div class="mui-container">
             <div class="mui-row">
-                <div class="mui-col-xs-3"><a href="">登录</a></div>
-                <div class="mui-col-xs-3"><a href="">注册</a></div>
-                <div class="mui-col-xs-6"><a href="">返回顶部</a></div>
+                <div class="mui-col-xs-3">
+                    <a href="">登录</a>
+                </div>
+                <div class="mui-col-xs-3">
+                    <a href="">注册</a>
+                </div>
+                <div class="mui-col-xs-6">
+                    <a href="#" class="fa fa-arrow-up">返回顶部</a>
+                </div>
             </div>
         </div>
         <div id="end">
@@ -72,30 +88,39 @@
             <p>m.manmanbuy.com</p>
         </div>
     </footer>
+    <!-- <div id="download">
+        <img src="./images/download.png" alt="">
+        <a href="#" class="fa fa-arrow-circle-up"></a>
+    </div> -->
     <!-- 导航块的模板引擎 -->
     <script type="text/html" id="navTmp">
-            {{each result as value i}} 
-                <div class="mui-col-xs-3" data-id="{{value.indexmenuId}}">
-                    <a href="{{value.titlehref}}">
-                        {{#value.img}}
-                        <p>{{value.name}}</p>
-                    </a>
-                </div>
-            {{/each}}
+        {{each result as value i}}
+        <div class="mui-col-xs-3" data-id="{{value.indexmenuId}}">
+            <a href="./html/{{value.titlehref}}">
+                {{#value.img}}
+                <p>{{value.name}}</p>
+            </a>
+        </div>
+        {{/each}}
     </script>
     <!-- 商品栏的模板引擎 -->
     <script type="text/html" id="productTmp">
         {{each result as value i}}
-            <div class="mui-row" data-id="{{value.productId}}">
-                <div class="mui-col-xs-3">
-                    {{#value.productImg2}}
-                </div>
-                <div class="mui-col-xs-6">
-                    <p>{{value.productName}}</p>
-                    <span></span>
-                </div>
-
+        <a href="./html/inlanddiscount.html?id={{value.productId}}" class="mui-row" data-id="{{value.productId}}">
+            <div class="left">
+                {{#value.productImg2}}
             </div>
+            <div class="right">
+                <p>{{value.productName}}
+                    <span>{{value.productPinkage}}包邮(需用劵)</span>
+                </p>
+                <p class="productTime">{{value.productFrom}}&nbsp;|&nbsp;{{value.productTime}}
+                    <span class="fa fa-commenting-o">{{value.productComCount}}</span>
+                </p>
+                <span></span>
+            </div>
+
+        </a>
         {{/each}}
     </script>
     <!-- 引入mui的js文件 -->
