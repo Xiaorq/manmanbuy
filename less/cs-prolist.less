@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+img {
+    vertical-align: middle;
+}
+ul {
+    list-style: none;
+}
+a {
+    color:#333333;
+}
+html,body {
+    height: 100%;
+    background-color: #fff;
+}
+
+@bgcolor:#ff841d;
+
+
+
+.mui-off-canvas-left {
+    background-color:red;
+}
+.mui-inner-wrap {
+    overflow: scroll;
+    background-color: #fff;
+    #header {
+        height: 51px;
+        background-color: @bgcolor;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:10px;
+            img.logo {
+                width: 185.5px;
+            }
+            img.app {
+                width: 34px;
+            }
+    }
+    #searchBar {
+        height: 51px;
+        background-color: #fff;
+        padding:8px 10px;
+        position: relative;
+        border-bottom: 1px solid #ccc;
+        >input {
+            margin-bottom: 0px;
+            height: 33px;
+            border-radius: 17px;
+        }
+        >button {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            border-radius: 17px;
+            background-color: @bgcolor;
+            border:1px solid @bgcolor;
+            color:#fff;
+        }
+    }
+    #main {
+        .title {
+            height: 35px;
+            padding:0 20px;
+            background-color: #fff;
+            span {
+                line-height: 35px;
+                font-size: 16px;
+                a {
+                    display:inline-block;
+                }
+                &:last-child {
+                    margin-top: 2px;
+                    float:right;
+                    width: 60px;
+                    height: 30px;
+                    border-radius: 17px;
+                    background-color: #4cd964;
+                    text-align: center;
+                    // box-shadow: 0px 0px 6px rgb(71, 71, 71) inset; 
+                    color:#fff;
+                
+                    
+                    
+                }
+            }
+        }
+        .pro-list {
+            ul {
+                background-color: #fff;
+                li {
+                    height: 140px;
+                    border-bottom: 1px solid #ececec;
+                    padding:10px;
+                    a {
+                        display:block;
+                        img {
+                            width: 120px;
+                            float: left;
+                        }
+                        >div {
+                            overflow: hidden;
+                            padding-left: 10px;
+                            position: relative;
+                            p {
+                                line-height: 16px;
+                                font-size: 14px;
+                                color:rgb(88, 88, 88);
+                                &.money {
+                                    color:red;
+                                }
+                            }
+                            .price {
+                                font-size: 13px;
+                                color:rgb(170, 170, 170);
+                            }
+                            .comment {
+                                position: absolute;
+                                font-size: 13px;
+                                right: 0;
+                                color:rgb(156, 156, 156);
+                                bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #footer {
+        padding:0px 10px;
+        .foot-top {
+            margin-top: 10px;
+            width: 100%;
+            a  {
+                text-align: center;
+                display:inline-block;
+                height: 34px;
+                background-color: #f2f2f2;
+                font-size: 14px;
+                border: 1px solid #888;
+                line-height: 34px;
+                border-radius: 17px;
+                &:hover {
+                    background-color: #2222;
+                }
+                img {
+                    vertical-align: middle;
+                }
+            }
+        }
+        .foot-bottom {
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+    #page {
+        padding:10px 0;
+        position: relative;
+        .mui-pager {
+            padding:0px 50px;
+            li {
+                &:first-child{
+                    float: left;
+                }
+                &:last-child{
+                    float: right;
+                }
+            }
+        }
+        >select {
+            text-align: center;
+            padding:0px 16px;
+            width: 30%;
+            height: 31px;
+            border: 1px solid #ddd;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform:translateX(-50%);
+            font-size: 20px;
+            font-weight: 300;
+            option{
+                height: 31px;
+                line-height: 31px;
+                padding-top: 5px;
+            }
+        }
+    }
+}
