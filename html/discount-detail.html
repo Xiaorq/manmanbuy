@@ -23,9 +23,9 @@
 <body>
         <header>
                 <div class="left">
-                    <a href="" class="fa fa-arrow-left"></a>
+                    <a href="#" class="fa fa-arrow-left" onClick="javascript :history.back(-1);"></a>
                 </div>
-                <span>优惠券</span>
+                <span>国内折扣  </span>
                 <div class="right"><a href=""><img src="../images/header_app.png" alt=""></a></div>
             </header>
         <!-- 主体商品开始 -->
@@ -56,7 +56,15 @@
                     <li class="mui-table-view-cell mui-collapse">
                         <a class="" href="javascript:;">前往购买</a>
                         <div class="mui-collapse-content">
-                            <p>测试地址</p>
+                            <p>北京  有货</p>
+                            <p>上海  有货</p>
+                            <p>广州  有货</p>
+                            <p>深圳  有货</p>
+                            <p>重庆  有货</p>
+                            <p>珠海  有货</p>
+                            <p>山沟  有货</p>
+                            <p>山顶  有货</p>
+                            
                         </div>
                     </li>
                 </ul>
@@ -68,7 +76,8 @@
                     <input type="button" value="发表评论">
                </form> -->
                <div class="new-pinlun"></div>
-              </div> 
+            </div>
+            
         </main>
         <!-- 主体商品结束 -->
         <!-- 底部开始 -->
@@ -89,7 +98,7 @@
         <script type="text/html" id="discountDetail">
            {{each result as value i }}
            <h4>{{value.productName}}</h4>
-           <p>{{value.Price}}</p>
+           <p>{{value.productPrice}}</p>
            <div class="info">
                <span class="mall">{{value.productFrom}}</span>
                <span class="addTime">{{value.productTime}}</span>
