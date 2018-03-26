@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+img {
+    vertical-align: middle;
+}
+ul {
+    list-style: none;
+}
+a {
+    color:#333333;
+}
+
+@bgcolor:#ff841d;
+#header {
+    height: 51px;
+    background-color: @bgcolor;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+    img.logo {
+        width: 185.5px;
+    }
+    img.app {
+        width: 34px;
+    }
+}
+
+#searchBar {
+    height: 51px;
+    background-color: #fff;
+    padding:8px 10px;
+    position: relative;
+    >input {
+        margin-bottom: 0px;
+        height: 33px;
+        border-radius: 17px;
+    }
+    >button {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        border-radius: 17px;
+        background-color: @bgcolor;
+        border:1px solid @bgcolor;
+        color:#fff;
+    }
+}
+
+#main {
+    .mui-content {
+        ul.mui-table-view {
+            >li {
+                .mui-collapse-content {
+                    >ul {
+                        border: 1px solid #ebebeb;
+                        border-bottom: none;
+                        border-right: none;
+                        >li {
+                            text-align: center;
+                            height: 40px;
+                            line-height: 40px;
+                            border-right: 1px solid #ebebeb;
+                            border-bottom: 1px solid #ebebeb;
+                            >a {
+                                font-weight: 700;
+                            }
+                            a {
+                                display:block;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    padding:0px 10px;
+    .foot-top {
+        margin-top: 30px;
+        width: 100%;
+        a  {
+            text-align: center;
+            display:inline-block;
+            height: 34px;
+            background-color: #f2f2f2;
+            font-size: 14px;
+            border: 1px solid #888;
+            line-height: 34px;
+            border-radius: 17px;
+            &:hover {
+                background-color: #2222;
+            }
+            img {
+                vertical-align: middle;
+            }
+        }
+    }
+    .foot-bottom {
+        margin-top: 10px;
+        text-align: center;
+    }
+}
