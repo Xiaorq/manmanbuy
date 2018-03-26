@@ -25,9 +25,9 @@
 <body>
         <header>
             <div class="left">
-                <a href="javascript:;" class="fa fa-arrow-left"></a>
+                <a href="#" onClick="javascript :history.back(-1);" class="fa fa-arrow-left"></a>
             </div>
-            <span>优惠券</span>
+            <span>国内折扣</span>
             <div class="right"><a href="javascript:;"><img src="../images/header_app.png" alt=""></a></div>
         </header>
         <!-- 主体商品开始 -->
@@ -66,7 +66,7 @@
         <script type="text/html" id="productList">
             {{each result as value i}}
                 <div class="mui-col-xs-6 item">
-                    <a href="#" title="{{value.productName}}" data-id="{{value.productId}}" class="jump">
+                    <a href="javascript:;" title="{{value.productName}}" data-id="{{value.productId}}" class="jump">
                         <div class="img">
                             {{#value.productImg}}
                         </div>
