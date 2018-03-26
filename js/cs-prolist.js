@@ -2,9 +2,11 @@ var manbuy;
 var categoryid;
 var pageid=1;
 var totalCount;
+var proName;
 $(function () {
     manbuy = new Manbuy();
     categoryid = manbuy.getQueryString("categoryid");
+    proName = manbuy.getQueryString("proName")||'二级导航';
     categoryid = Number(categoryid);
     // 调用获取商品的方法
     manbuy.queryPro();
@@ -29,6 +31,10 @@ Manbuy.prototype = {
             success: function (data) {
                 $('#loading').css("display",'none');
                 //分类标题模板
+                data.proName = proName;
+                //二级目录
+                var html2 = template('secTitleTmp',data);
+                $('.all-brand').html(html2);
                 var html = template('catTitleTmp', data);
                 $('.pro-list ul').html(html);
                 //分页的模板
@@ -75,7 +81,7 @@ Manbuy.prototype = {
         mui('.mui-inner-wrap').on('tap', 'a.product-list', function () {
             // console.log(111);
             var productid =$(this).data('productid');
-            window.location.href = "http://mmb.ittun.com/api/getproduct?productid=" + productid;
+            window.location.href = "cs-commodity.html?productid=" + productid+'&proName='+proName;
             
         });
         //给span添加tap监听事件
