@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>产品比价-慢慢买</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet/less" href="../less/cs-prolist.less">
+    <link rel="icon" href="../favicon.ico">
+    <script src="../lib/less/less.js"></script>
+
+
+</head>
+
+<body>
+    <!-- 侧滑导航根容器 -->
+<div class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+        <!-- 菜单容器 -->
+        <aside class="mui-off-canvas-left">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!-- 菜单具体展示内容 -->
+                    <h3>筛 选</h3>
+                    <span class="close">&times;</span>
+                    <div class="brand">
+                        <div class="title">
+                            品牌
+                            <!-- 0表示向下  1表示向上 -->
+                            <span class="arrow mui-icon mui-icon-arrowdown" data-direction="0"></span>
+                        </div>
+                        <ul class="word">
+                            <li>
+                                <a href="" class="search">全部</a>
+                            </li>
+                            <li><a href="" class="search">夏普</a></li>
+                            <li><a href="" class="search">TCL</a></li>
+                            <li><a href="" class="search">长虹</a></li>
+                            <li><a href="" class="search">康佳</a></li>
+                            <li><a href="" class="search">苹果</a></li>
+                            <li><a href="" class="search">小米</a></li>
+                        </ul>
+                    </div>
+                    <div class="brand">
+                        <div class="title">
+                            品类
+                            <span class="arrow mui-icon mui-icon-arrowdown"></span>
+                        </div>
+                        <ul class="word">
+                            <li>
+                                <a href="" class="search">全部</a>
+                            </li>
+                            <li><a href="" class="search">液晶</a></li>
+                            <li><a href="" class="search">曲面</a></li>
+                            <li><a href="" class="search">3D</a></li>
+                            <li><a href="" class="search">康佳</a></li>
+                            <li><a href="" class="search">苹果</a></li>
+                            <li><a href="" class="search">小米</a></li>
+                        </ul>
+                    </div>
+                    <div class="brand">
+                        <div class="title">
+                            品种
+                            <span class="arrow mui-icon mui-icon-arrowdown"></span>
+                        </div>
+                        <ul class="word">
+                            <li>
+                                <a href="" class="search">全部</a>
+                            </li>
+                            <li><a href="" class="search">帅哥</a></li>
+                            <li><a href="" class="search">美女</a></li>
+                            <li><a href="" class="search">二次元</a></li>
+                            <li><a href="" class="search">三次元</a></li>
+                            <li><a href="" class="search">四次元</a></li>
+                            <li><a href="" class="search">N次元</a></li>
+                        </ul>
+                    </div>
+                    <div class="brand">
+                        <div class="title">
+                            功能
+                            <span class="arrow mui-icon mui-icon-arrowdown"></span>
+                        </div>
+                        <ul class="word">
+                            <li>
+                                <a href="" class="search">全部</a>
+                            </li>
+                            <li><a href="" class="search">智能</a></li>
+                            <li><a href="" class="search">人工</a></li>
+                            <li><a href="" class="search">3D</a></li>
+                            <li><a href="" class="search">全自动</a></li>
+                            <li><a href="" class="search">程序员</a></li>
+                            <li><a href="" class="search">小米</a></li>
+                        </ul>
+                    </div>
+                    <div class="brand">
+                        <div class="title">
+                            尺寸
+                            <span class="arrow mui-icon mui-icon-arrowdown"></span>
+                        </div>
+                        <ul class="word">
+                            <li>
+                                <a href="" class="search">全部</a>
+                            </li>
+                            <li><a href="" class="search">23*</a></li>
+                            <li><a href="" class="search">45-</a></li>
+                            <li><a href="" class="search">21</a></li>
+                            <li><a href="" class="search">6X2</a></li>
+                            <li><a href="" class="search">5X7</a></li>
+                            <li><a href="" class="search">X56</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- 主页面容器 -->
+        <div class="mui-inner-wrap">
+            <div class="mui-content mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!-- 主界面具体展示内容 -->
+                    <!-- 头部 -->
+                    <header id="header">
+                        <img class="logo" src="../images/header_logo.png" alt="">
+                        <img class="app" src="../images/header_app.png" alt="">
+                    </header>
+                    <!-- 搜索栏 -->
+                    <section id="searchBar">
+                        <input type="search" class="mui-input-clear" placeholder="输入想要比价的商品">
+                        <button type="button" class="mui-btn mui-icon mui-icon-search">
+                            搜索
+                        </button>
+                    </section>
+                    <!-- 主体部分 -->
+                    <main id="main">
+                        <div class="title">
+                            <span>
+                                <a href="index.html">首页 ></a>
+                            </span>
+                            <span class="all-brand">
+                                <!-- <a href="#">品牌大全</a> -->
+                            </span>
+                            <span class="fa fa-filter" class="fa fa-filter">
+                                筛选
+                            </span>
+                        </div>
+                        <div class="pro-list">
+                            <ul>
+                                
+                            </ul>
+                        </div>
+                        <!-- 加载的动画 -->
+                        <div id="loading">
+                            <div id="loading-center">
+                                <div id="loading-center-absolute">
+                                    <div id="object"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                    
+                    <!-- 分页 -->
+                    <section id="page">
+                            <ul class="mui-pager">
+                                <li>
+                                    <a class="prevPage" href="#">
+                                        上一页
+                                    </a>
+                                </li>
+                                <li >
+                                    <a  class="nextPage" href="#">
+                                        下一页
+                                    </a>
+                                </li>
+                            </ul>
+                            <select class="">
+                                <option>1/3</option>
+                                <option >2/3</option>
+                                <option>3/3</option>
+                            </select>
+                    </section>
+                    <!-- 底部 -->
+                    <footer id="footer">
+                        <div class="foot-top mui-row">
+                            <a href="#" class="mui-col-xs-4">登录</a>
+                            <a href="#" class="mui-col-xs-4">注册</a>
+                            <a href="#" class="mui-col-xs-4">
+                                <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15">返回顶部</a>
+                        </div>
+                        <div class="foot-bottom">
+                            <p>
+                                <a href="http://m.manmanbuy.com/app.html?type=footword&amp;value=wap" onclick="trackEvent('footer下载');" style="color: Red;">手机APP下载</a>
+                                <a href="http://m.manmanbuy.com">
+                                    慢慢买手机版</a> -- 掌上比价平台</p>
+                            <p>
+                                m.manmanbuy.com
+                                <img src="http://c.cnzz.com/wapstat.php?siteid=1256699064&amp;r=http%3a%2f%2fm.manmanbuy.com%2f&amp;rnd=1572378854" width="0"
+                                    height="0">
+                            </p>
+                        </div>
+                    </footer>
+                    <!-- 广告 -->
+                    <section id="ad"></section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分类的标题模板 -->
+    <script id='catTitleTmp' type="text/html">
+        {{each result}}
+            <li>
+                <a href="#" class='product-list' data-productid='{{$value.productId}}'>{{#$value.productImg}}
+                    <div class="describe">
+                        <p>{{$value.productName}}</p>
+                        <p>{{$value.brandName}}</p>
+                        <p class="money">{{$value.productPrice}}</p>
+                        <span class="price">商城<span>{{$value.productQuote}}</span></span>
+                        <span class="comment"><span>{{$value.productCom}}</span></span>
+                    </div>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+
+    <!-- 分页的模板 -->
+    <script id='pageTmp' type="text/html">
+            {{each pageNumArr}}
+                <option {{$index+1==1?"selected":''}}>{{$index+1}}/{{pageNum}}</option>
+            {{/each}}
+    </script>
+    <!-- 二级商品的模板 -->
+    <script id='secTmp' type="text/html">
+        {{each result}}
+            <li class="mui-col-xs-4" data-categoryid="{{$value.categoryId}}" ><a href="cs-prolist.html?categoryid={{$value.categoryId}}">{{$value.category}}</a></li>
+        {{/each}}
+    </script>
+
+    <!-- 首页后面的二级目录 -->
+    <script id='secTitleTmp' type="text/html">
+        <a href="#">{{proName}}</a>
+    </script>
+
+
+
+    <!-- 导入js -->
+    <script  src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <script src="../lib/artTemplate/template.js"></script>
+    <script src="../js/cs-prolist.js"></script>
+</body>
+
+</html>

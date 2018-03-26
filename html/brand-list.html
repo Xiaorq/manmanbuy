@@ -17,7 +17,7 @@
 
     <div class="topbar">
         <a href="../index.html" class="logo"></a>
-        <a href="javascript:" class="app"></a>
+        <a href="http://home.manmanbuy.com/app.aspx" class="app"></a>
     </div>
     <!--搜索框-->
     <div id="searchbar">
@@ -33,7 +33,7 @@
         <div class="topbar" id="topbar">
             <a href="../index.html">首页</a>
             <span>></span>
-            <a href="brand.html">品牌大全</a>
+            <a href="brandTitle.html">品牌大全</a>
             <span>></span>
             <a href="javascript:"><span class="brand-title"></span>哪个牌子好</a>
         </div>
@@ -65,7 +65,9 @@
                 <div class="topbar">
                     <span class="brand-title"></span>最有用的用户评论
                 </div>
-                <ul class="comment-list"></ul>
+                <ul class="comment-list">
+
+                </ul>
             </section>
 
         </div>
@@ -101,7 +103,7 @@
 </script>
 <script id="productItemTemp" type="text/html">
 {{each result as value i}}
-<li class="product-item">
+<li class="product-item clearFix">
     <div class="left">{{#value.productImg}}</div>
     <div class="right">
         <div class="name">{{value.productName}}</div>
@@ -117,6 +119,21 @@
 </li>
 
 {{/each}}
+</script>
+<script id="commentItemTemp" type="text/html">
+<li class="comment-item">
+    <div class="product">
+        <div class="img">{{#$data.product_data.result[0].productImg}}</div>
+        <div class="proName">{{#$data.product_data.result[0].productName}}</div>
+    </div>
+    <div class="comment-box">
+        <div class="topbar">
+            <span class="username">{{$data.comment_data.result[0].comName}}</span>
+            <span class="comment-time">{{$data.comment_data.result[0].comTime}}</span>
+        </div>
+        <p>{{$data.comment_data.result[0].comContent}}</p>
+    </div>
+</li>
 </script>
 
 <script src="../lib/artTemplate/template.js"></script>
