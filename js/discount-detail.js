@@ -6,8 +6,9 @@ $(function(){
     id = getQueryString('productId');
     detail.getProductDetail(id);
     detail.getPinlunDetail(id);
-    
+    //console.log(id);
 })
+
 
 Detail.prototype = {
     getProductDetail:function(id){
@@ -29,7 +30,7 @@ Detail.prototype = {
             dataType:'json',
             data:{productid:id},
             success:function(data){
-                console.log(data);
+                //console.log(data);
                 var html = template('pinlundetail',data)
                 $(".new-pinlun").html(html);
                 
@@ -43,7 +44,7 @@ Detail.prototype = {
 function getQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
     var r = window.location.search.substr(1).match(reg);
-    console.log(decodeURI(r[2]));
+    //console.log(decodeURI(r[2]));
     if (r != null) return decodeURI(r[2]);
     return null;
 }
