@@ -32,7 +32,7 @@
         <main id="main">
            <div class="product-detail">
                <div class="conter">
-                    <h4>【淳念】夏季纯棉宽松卡通家居服睡裙</h4>
+                    <!-- <h4>【淳念】夏季纯棉宽松卡通家居服睡裙</h4>
                     <p>券后39.00元包邮</p>
                     <div class="info">
                         <span class="mall">天猫商城</span>
@@ -48,7 +48,7 @@
                                 </div>
                             </a>
                         </li>
-                    </ul>
+                    </ul> -->
                </div>
            </div>
            <div class="btn-go">
@@ -62,13 +62,13 @@
                 </ul>
            </div>
            <div class="comment">
-               <div class="pinlun">发表评论</div>
+               <!-- <div class="pinlun">发表评论</div>
                <form action="#">
                     <textarea></textarea>
                     <input type="button" value="发表评论">
-               </form>
-               <div class="new-pinlun">最新评论</div>
-               
+               </form> -->
+               <div class="new-pinlun"></div>
+              </div> 
         </main>
         <!-- 主体商品结束 -->
         <!-- 底部开始 -->
@@ -86,11 +86,37 @@
         <!-- 底部结束 -->
 
         <!-- 创建产品模板开始 -->
-        <script type="text/html" id="productList">
+        <script type="text/html" id="discountDetail">
+           {{each result as value i }}
+           <h4>{{value.productName}}</h4>
+           <p>{{value.Price}}</p>
+           <div class="info">
+               <span class="mall">{{value.productFrom}}</span>
+               <span class="addTime">{{value.productTime}}</span>
+               <span class="auther"> {{value.productTips}}</span>
+           </div>
+           <ul class="mui-table-view">
+               <li class="mui-table-view-cell mui-media">
+                   <a href="javascript:;">
+                       <div class="mui-pull-right">{{#value.productImg}}</div>
+                       <div class="mui-media-body wenzi">
+                       {{value.productInfo}}
+                       </div>
+                   </a>
+               </li>
+           </ul>
+              
            
+           {{/each}}
         </script>
-       
         <!-- 创建产品模板结束 -->
+        <!-- 创建评论模板开始 -->
+        <script type="text/html" id="pinlundetail">
+            {{each result as value i}}
+             <div>{{#value.productComment}}</div>
+            {{/each}}
+        </script>
+        <!-- 创建评论模板结束 -->
     
     
    
