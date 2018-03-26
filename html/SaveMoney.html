@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>买一买看一看拉</title>
+    <!-- 1.引入站点图标 -->
+    <link rel="icon" href="../images/favicon.ico">
+    <!-- 2.引入字体图标的样式文件 -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 3.引入mui的样式文件 -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <!-- 4.引入less样式文件 -->
+    <link rel="stylesheet/less" href="../less/SaveMoney.less">
+    <!-- 5.引入less.js编译器文件 -->
+    <script src="../lib/less/less.js"></script>
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="#" class="left fa fa-angle-left"></a>
+        <h4>省钱控-最新优惠</h4>
+        <a href="#" class="right"></a>
+    </header>
+    <!-- 主体区域 -->
+    <main id="main">
+        <div class="sounds">
+            <!-- <a href="javascript:;" class="mui-slider-handle mui-clearfix">
+                <img class="mui-media-object mui-pull-left" src="http://wnzk-img.zuyushop.com/r_img/img/20180325/00/a75d7d5371774482896be58de3190b30.jpg">
+                <div class="mui-media-body">
+                    <div class="priceName">
+                        <span class="num">SOFINA 苏菲娜 透美颜 日间倍护防护乳 SPF50+ 30ml *2件 </span>
+                        <span class="price">216元包邮（立减）</span>
+                    </div>
+                    <div class="other">
+                        <span class="mall">京东商城 | 03-25 10:13</span>
+                        <span class="comment">
+                            <span class="fa fa-commenting-o"></span>
+                            0
+                        </span>
+                    </div>
+                </div>
+            </a> -->
+            <!-- <a href="javascript:;" class="mui-slider-handle mui-clearfix">
+                <img class="mui-media-object mui-pull-left" src="http://wnzk-img.zuyushop.com/r_img/img/20180325/00/a75d7d5371774482896be58de3190b30.jpg">
+                <div class="mui-media-body">
+                    <div class="priceName">
+                        <span class="num">SOFINA 苏菲娜 透美颜 日间倍护防护乳 SPF50+ 30ml *2件 </span>
+                        <span class="price">216元包邮（立减）</span>
+                    </div>
+                    <div class="other">
+                        <span class="mall">京东商城 | 03-25 10:13</span>
+                        <span class="comment">
+                            <span class="fa fa-commenting-o"></span>
+                            0
+                        </span>
+                    </div>
+                </div>
+            </a> -->
+            <!-- <a href="javascript:;" class="mui-slider-handle mui-clearfix">
+                <img class="mui-media-object mui-pull-left" src="http://wnzk-img.zuyushop.com/r_img/img/20180325/00/a75d7d5371774482896be58de3190b30.jpg">
+                <div class="mui-media-body">
+                    <div class="priceName">
+                        <span class="num">SOFINA 苏菲娜 透美颜 日间倍护防护乳 SPF50+ 30ml *2件 </span>
+                        <span class="price">216元包邮（立减）</span>
+                    </div>
+                    <div class="other">
+                        <span class="mall">京东商城 | 03-25 10:13</span>
+                        <span class="comment">
+                            <span class="fa fa-commenting-o"></span>
+                            0
+                        </span>
+                    </div>
+                </div>
+            </a> -->
+        </div>
+    </main>
+    <!-- 底部区域 -->
+    <footer id="footer">
+		  <div class="pager">
+                <div class="left mui-col-xs-2">
+                    <a href="#">上一页</a>
+                </div>
+                <div class="paging mui-col-xs-3">
+                    <select class="center"></select>
+                </div>
+                <div class="right mui-col-xs-2">
+                    <a href="#">下一页</a>
+                </div>
+          </div>
+          <div class="meau">
+              <span>首页</span>
+              <span>></span>
+              <span>省钱控</span>
+          </div>
+          <div class="category">
+                <a href="#" class="register">登录</a>
+                <a href="#" class="login">注册</a>
+                <a href="#" class="return">返回顶部</a>
+          </div>
+    </footer>
+    <!-- 创建商品模板 -->
+    <script type="text/html" id="getSoundsTmp">
+        {{each result as value i}}
+        <a href="javascript:;" class="mui-slider-handle mui-clearfix">
+            <div class="price-img">
+                {{#value.productImg2}}
+            </div>
+            <div class="mui-media-body">
+                <div class="priceName">
+                    <span class="num">{{value.productName}}</span>
+                    <span class="price">{{value.productPinkage}}</span>
+                </div>
+                <div class="other">
+                    <span class="mall">{{value.productFrom}} | {{value.productTime}}</span>
+                    <span class="comment">
+                        <span class="fa fa-commenting-o" num="{{value.productComCount}}"></span>
+                        0
+                    </span>
+                </div>
+            </div>
+        </a> 
+        {{/each}}
+    </script>
+    <!-- 6.引入mui的js文件 -->
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <!-- 7.引入zepto的js文件 -->
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <!-- 8.引入模板引擎的js文件 -->
+    <script src="../lib/artTemplate/template.js"></script>
+    <!-- 9.引入自己的写的js文件(自己写的js必须最后引入) -->
+    <script src="../js/SaveMoney.js"></script>
+</body>
+</html>

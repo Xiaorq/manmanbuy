@@ -1,0 +1,214 @@
+//清除浮动
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+//头部
+
+#header{
+    height: 44px;
+    width: 100%;
+    background-color: #fe4a65;
+    position: fixed;
+    text-align: center;
+    >.logo{
+      display: block;
+      position: absolute;
+      top: 12px;
+      left: 10px;
+      color: #fff;
+      font-size: 18px;
+    }
+    >form{
+      width: 100%;
+      padding: 9px 50px 9px 70px;
+        .search-text{
+            background-color: #fff;
+            height: 26px;
+            list-style: none;
+            border: 0;
+            font-size: 14px;
+            margin-bottom: 0;
+            line-height: 26px;
+        }
+        .search-submit{
+            position: absolute;
+            top: 13px;
+            right:75px; 
+            border: 0;
+            padding: 0;
+            margin: 0;
+            .fa-search{
+                color: #ccc;
+                font-size: 18px;
+            }
+        }
+    }
+     .cat{
+         position: absolute;
+         top: 12px;
+         right: 15px;
+          display: block;
+           .fa-bars{
+               color: #fff;
+               font-size: 20px;
+           }
+     }
+}
+//主内容
+ //轮播图
+ #main{
+     width: 100%;
+     height: 100%;
+     padding-top: 44px;
+    #cat{
+      height: 86px;
+      width: 100%;
+      background-color:#fff;
+      padding-top: 10px;
+      margin-bottom: 10px;
+      .mui-row{
+          width: 100%;
+          height:100%;
+          .mui-col-xs-3{
+              float: left;
+              a{
+                display: block;
+                height: 75px;
+                text-align: center;
+                i{
+                    width: 51px;
+                    height: 51px;
+                    margin:0 auto;
+                    margin-bottom:7px;
+                    display: block;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 51px;
+                    font-size: 26px;
+                    color: #fff;
+                }
+                &.hot{
+                    .fa-fire{    
+                        background-color: #ffc151;
+                    }
+                }
+                &.parcel{
+                  .fa-fire{
+                    background-color: #fe4a65;
+                  }
+                }
+                &.price{
+                    .fa-gift{
+                      background-color: #ff7692;
+                    }
+                  }
+                &.super{
+                    .fa-bar-chart{
+                      background-color: #a992ff;
+                    }
+                }
+                span{
+                    display: block;
+                    text-align: center;
+                    font-size: 12px;
+                    color: #333;
+                }
+              }
+              
+          }
+          
+      }
+    }
+    //超人气
+    #super{
+        background-color: #fff;
+        margin-bottom: 10px;
+        padding-top: 1px;
+        height: 193px;
+        overflow: hidden;
+        position: relative;
+        .super-title{
+            padding:10px 10px 5px 10px;
+            h3{
+                float: left;
+                font-size: 14px;
+                color: #666;
+                height: 16px;
+                padding-left: 10px;
+                border-left: 3px solid #fe4a65;
+            }
+            a{
+                float: right;
+                font-size: 12px;
+                color: #666;
+            }
+        }
+        .swiper-container{
+            width: 100%;
+            height: 100%;
+           .swiper-wrapper{
+               height: 100%;
+               position: absolute;
+               top: 0;
+               left: 0px;
+               padding:0 10px;
+               .swiper-slide{  
+                   height: 100%; 
+                   width: 30%;
+                   background-color: #fff; 
+                //    margin-right: 10px;
+                   font-size: 12px;
+                   a{
+                       width: 100%;
+                       height: 100%;
+                       display: block;
+                       width: 106px;
+                       .cover{
+                           img{
+                            //    width: 106px;
+                               vertical-align: middle;
+                               max-width: 106px;
+                               max-height: 106px;
+                           }
+                       }
+                       .title{
+                           color: #666;
+                           font-size: 12px;
+                           height: 14px;
+                           margin:10px 0 3px;
+                           white-space: normal;
+                           overflow: hidden;
+                           line-height: 14px;
+                       }
+                       .info{
+                           font-size: 12px;
+                           color: #ccc;
+                           height: 18px;
+                           line-height: 18px;
+                           .price{
+                               color: #fe0000;
+                               font-family: 12px;
+                               position: relative;
+                               top: 1px;
+                           }
+                           .info{
+                               display: inline-block;
+                               font-size: 11px;
+                           }
+                       }
+                   }
+               }
+              
+           } 
+        }
+    }
+    //商家优惠信息
+    #reduced-price{
+        
+    }
+ }

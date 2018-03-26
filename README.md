@@ -1,13 +1,27 @@
 # manmanbuy
 慢慢买项目
 
+# 文件名
+比价搜索:category.html
+省钱控: moneyctrl.html
+国内折扣:inlanddiscount.html
+白菜价: baicaijia.html
+海淘折扣: moneyctrl.html
+优惠卷:coupon.html
+查历史价:category.html
+凑单品:gsproduct.html
+口碑排行:category.html
+商城导航:sitenav.html
+品牌大全:brandTitle.html
+
+
 # git协作开发
 ### 准备工作
-1. 新建一个文件夹，然后克隆仓库 git clone -b dev git@github.com:Organ-manmanbuy/manmanbuy.git
+1. 新建一个文件夹，然后克隆仓库 git clone -b dev https://github.com/Organ-manmanbuy/manmanbuy.git
 2. 转到开发分支 git checkout dev
 
 ### 提交代码
-1. 添加 git add .
+1. 添加 git add 自己写的文件（<b>不要用git add .或git add *！！会覆盖掉其他人的文件</b>）
 2. 提交到本地暂存区 git commit -m '认真写的提交说明'
 3. 拉取远程仓库的最新版本 git pull origin dev
 4. 推送到远程仓库 git push origin dev
@@ -42,4 +56,4 @@
 > 问题记录及解决方案（可选）：
 > 1. xxx页面轮播图无法显示，解决方案：xxx
 > 2. yyy页面header无法固定，解决方案：yyy
-> 3. zzz页面zzz问题，无法解决
+> 3. zzz页面zzz问题，无法解决git
