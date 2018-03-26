@@ -9,14 +9,13 @@
         // ajax 是一种在无需重新加载整个网页的情况下,更新部分网页的技术.
 $.ajax({
     url:"http://mmb.ittun.com/api/getsitenav",
-    data: {"result": [{
-        "navId": "导航id",
-        "navImg": "导航图片",
-        "navTitle": "导航名称",
-        "navHref": "导航链接	"
-    }]}
-})
-
+    success: function(backdata){
+        //console.log(backdata);
+       var content = template("web",backdata) 
+       $("#main").html(content)
+}}
+)}
+)
         // 一开始默认拿到"P"的数据展示页面
         // $.ajax({
         //     url: "./api/getdata.php",
@@ -28,9 +27,9 @@ $.ajax({
         //         var data = JSON.parse(backdata);
         //         console.log(data);
         //         // console.log(backdata);
-        //         var content = template("photo",data)
+            //     var content = template("photo",data)
 
-        //         $(".photo ul").html(content);
+               //  $(".photo ul").html(content);
         //     },
 
         // })
@@ -69,6 +68,6 @@ $.ajax({
 
 
             
-        })
+    //     })
 
-    }
+    // }
