@@ -20,6 +20,18 @@ ul {
   list-style: none;
 }
 
+.clearFix:before,
+.clearFix:after {
+  content: "";
+  display: table;
+}
+.clearFix:after {
+  clear: both;
+}
+.clearFix {
+  *zoom: 1;
+}
+
 @c:#ff841d;
 
 #header {

@@ -15,7 +15,10 @@
 	<!-- 引入less可以直接引入，但是要带入一个/less -->
 	<link rel="stylesheet/less" href="../less/coupon.less">
 	<!-- 引入less.js编译器文件（专门在浏览器里面去临时编译less文件）less.js需要在less文件后面引入，但是不能放在body后面 因为less。js是需要编译less文件影响样式 -->
+	<script src="../lib/artTemplate/template.js"></script>
 	<script src="../lib/less/less.js"></script>
+	<script src="../lib/zepto/zepto.min.js"></script>
+	<script src="../js/coupon.js"></script>
 	<!-- 除非对页面渲染有影响的JS文件，一般的JS文件一般放在body之后 -->
 	<!-- css在head里面引入 -->
 </head>
@@ -23,7 +26,7 @@
 	<!-- 网页顶部 -->
     <header>
 		<div class="left">
-			<a href="" class="fa fa-arrow-left"></a>
+			<a href="javascript:history.back(-1)" class="fa fa-arrow-left"></a>
 		</div>
 		<span>优惠券</span>
 		<div class="right"><a href=""><img src="../images/header_app.png" alt=""></a></div>
@@ -33,7 +36,12 @@
 		<!-- 拥有的优惠券 -->
 		<div class="had-coupon">
 			<ul>
-				<li><a href="./coupondetail.html"><img src="../images/ic_kb.png" alt=""></a></li>
+				<li>
+					<a href="./coupondetail.html">
+						<img src="../images/ic_kb.png" alt="">
+						<p>肯德基</p>
+					</a>
+				</li>
 			</ul>
 		</div>
 		<!-- 导航 -->
@@ -51,7 +59,7 @@
 				<li><a href="#header" class="fa fa-arrow-circle-up">回到顶部</a></li>
 			</ul>
 			<div class="footer-down">
-				<p><a href="#">手机APP下载</a><a href="#">慢慢买手机版</a> -- 掌上比价平台</p>
+				<p><a href="../index.html">手机APP下载</a><a href="#">慢慢买手机版</a> -- 掌上比价平台</p>
 				<p> m.manmanbuy.com </p>
 			</div>
 		</footer>
@@ -59,3 +67,13 @@
 		<div id="download"><a href=""><img src="../images/download.png" alt=""></a></div>
 </body>
 </html>
+<script type="text/html" id="hadCouponTmp">
+	{{each result as value i}}
+	<li>
+			<a href="./coupondetail.html?id={{value.couponId}}">
+				<img src={{value.couponImg}} alt="">
+				<p>{{value.couponTitle}}</p>
+			</a>
+		</li>
+	{{/each}}
+</script>
