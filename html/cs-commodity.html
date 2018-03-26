@@ -19,26 +19,34 @@
     <!-- 2.引入mui的样式文件 -->
     <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
     <!-- 1.引入less的时候可以直接引入 -->
-    <link rel="stylesheet/less" href="../less/cs-xiangqing.less">
+    <link rel="stylesheet/less" href="../less/cs-commodity.less">
     
     <!-- 引入less.js编译文件-->
     <script src="../lib/less/less.js"></script>
 </head>
 <body>
+    <!-- 头部 -->
+    <header id="header">
+        <img class="logo" src="../images/header_logo.png" alt="">
+        <img class="app" src="../images/header_app.png" alt="">
+    </header>
+    <!-- 搜索栏 -->
+    <section id="searchBar">
+        <input type="search" class="mui-input-clear" placeholder="输入想要比价的商品" >
+        <button type="button" class="mui-btn mui-icon mui-icon-search">
+            搜索
+        </button>
+    </section>
     <!-- 中间部分 -->
     <main id="main">
         <!-- 电视机的详请导航栏 -->
         <section id="television">
             <div class="nav">
                 <a href="">首页</a> >
-                <a href="">平板电脑</a> >
+                <!-- <a href="">平板电脑</a> > -->
                 <!-- <a href="">海信 32EC300D</a> -->
             </div>
-            <script type="text/html">
-             {{each result as vaule i }}
-             <a href="">{{vaule.productid}}</a>
-             {{/each}}
-            </script>
+            
             <!--电视的图片的详情 -->
             <div class="detail-head">
                 <!-- <div class="pic">
@@ -155,7 +163,32 @@
                      </div>   
             
         </section>
+
+
+
     </main>
+    <!-- 底部 -->
+    <footer id="footer">
+            <div class="foot-top mui-row">
+                <a href="#" class="mui-col-xs-4">登录</a>
+                <a href="#" class="mui-col-xs-4">注册</a>
+                <a href="#" class="mui-col-xs-4">
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15">返回顶部</a>
+            </div>
+            <div class="foot-bottom">
+                <p>
+                    <a href="http://m.manmanbuy.com/app.html?type=footword&amp;value=wap" onclick="trackEvent('footer下载');" style="color: Red;">手机APP下载</a>
+                    <a href="http://m.manmanbuy.com">
+                        慢慢买手机版</a> -- 掌上比价平台</p>
+                <p>
+                    m.manmanbuy.com
+                    <img src="http://c.cnzz.com/wapstat.php?siteid=1256699064&amp;r=http%3a%2f%2fm.manmanbuy.com%2f&amp;rnd=1572378854" width="0"
+                        height="0">
+                </p>
+            </div>
+        </footer>
+
+    
     <!-- 渲染模版导航栏 -->
     <script type="text/html" id="navTmp">
         {{each result as vaule i}}
@@ -189,7 +222,7 @@
     <!-- 优先评论 -->
     <script type="text/html" id="priorityTmp">
      {{each result as vaule i}}
-     <div class="mui-row">
+        <div class="mui-row">
             <div class="mui-col-xs-6">
                 <span>{{vaule.comName}}</span>
             </div>
@@ -215,6 +248,14 @@
         </div>
      {{/each}}
     </script>
+    <!-- 面包屑导航一层 -->
+    <script type="text/html" id="fenleiTmp">
+        <a href="">{{firstName}} ></a>
+    </script>
+    <!-- 面包屑导航二层 -->
+    <script type="text/html" id="secTmp">
+        <a href="">{{proName }} </a>
+    </script>
     <!-- 引入mui的js文件 -->
     <script src="../lib/mui/js/mui.min.js"></script>
     <!-- 4.引入zepto的js文件 -->
@@ -222,7 +263,7 @@
     <!-- 5.引入模版引擎的js文件 -->
     <script src="../lib/artTemplate/template.js"></script>
     <!-- 6.引入mui的js轮播文件 -->
-    <script src="../js/cs-xiangqing.js"></script>
+    <script src="../js/cs-commodity.js"></script>
     
 </body>
 </html>

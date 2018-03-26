@@ -1,14 +1,19 @@
 var shangpin;
 // id的全局变量
 var productid;
+var  firstName;
 $(function(){
    shangpin = new Shangpin();
+   productid  = shangpin.getQueryString("productid");
 //    mui的左右的初始化
    shangpin.initialize();
-   shangpin.template();
    shangpin.precedence();
    shangpin.ff();
-   productid  = shangpin.getQueryString("productid");
+   shangpin.template();
+
+  firstName= shangpin.getQueryString("proName");
+   
+   
 })
 var Shangpin = function(){
 
@@ -32,18 +37,25 @@ getQueryString: function (name) {
     return null;
 },
 template:function(){
- $.ajax({
-     url:'http://mmb.ittun.com/api/getproduct',
-     data:{productid:productid},
-     success:function(data){
-        //  console.log(data);
-        var html = template('navTmp',data);
-        $(".detail-head").html(html);
-        var html = template('particularsTmp',data);
-        $(".price").html(html);
-        
-     }
- })
+    $.ajax({
+        url:'http://mmb.ittun.com/api/getproduct',
+        type:'get',
+        data:{productid:productid},
+        success:function(data){
+            console.log(data);
+            var html = template('navTmp',data);
+            $(".detail-head").html(html);
+            var html = template('particularsTmp',data);
+            $(".price").html(html);
+            var proName = data.result[0].productName.split(" ")[0];
+            data.firstName = firstName;
+            var html = template('fenleiTmp',data);
+            $('.nav').append(html);
+            data.proName = proName;
+            var html = template('secTmp',data);
+            $('.nav').append(html);
+        }
+    })
 },
 precedence:function(){
     $.ajax({
@@ -53,6 +65,7 @@ precedence:function(){
             // console.log(data);
             var html = template('priorityTmp',data);
             $(".c-network").html(html);
+            
         }
     })
 },
