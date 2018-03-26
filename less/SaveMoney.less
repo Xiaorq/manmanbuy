@@ -1,0 +1,138 @@
+// 定义最大宽度和高度
+html.body {
+    width: 100%;
+    height: 100%;
+}
+
+// 头部区域
+#header {
+    width: 100%;
+    height: 44px;
+    background-color: #ff841d;
+    position: relative;
+    text-align: center;
+    .left {
+        position: absolute;
+        left: 15px;
+        top: 7px;
+        font-size: 28px;
+        color: #fff;
+    }
+    h4 {
+        color: #fff;
+        font-size: 20px;
+        line-height: 44px;
+        margin: 0;
+    }
+    .right {
+        position: absolute;
+        right: 20px;
+        top: 5px;
+        width: 32px;
+        height: 32px;
+        background: url("../images/header_app.png") left top/32px 32px;
+    }
+}
+
+// 主体样式
+#main {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    >.sounds{
+        width: 100%;
+        height: 100%;
+        >.mui-slider-handle {
+            display: flex;
+            width: 100%;
+            height: 128px;
+            border-bottom: 1px solid #ccc;
+            padding: 14px 8px;
+            >.price-img {
+                flex-basis: 100px;
+                height: 100px;
+                margin-right: 10px;
+                >img {
+                    width: 100px;
+                    height: 100px;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                }
+            }
+            >.mui-media-body {
+                flex: 1;
+                >.priceName {
+                    margin-bottom: 10px;
+                    >.num {
+                        color: #000;
+                    }
+                    >.price {
+                        color: #ff6c00;
+                    }
+                }
+                >.other {
+                    >.mall {
+                        color: #ccc;
+                    }
+                    >.comment {
+                        color: #ccc;
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 底部区域
+#footer {
+    >.pager{
+       display: flex;
+       justify-content: space-between;
+       padding: 20px 8px;
+        >.mui-col-xs-2{
+            width: 90px;
+            height: 35px;
+            >a{
+                text-align: center;
+                line-height: 35px;
+                display: inline-block;
+                background: linear-gradient(to bottom,#eaeaea,#d6d6d6);
+                width: 90px;
+                height: 35px;
+                color: #000;
+                box-shadow: 0 0 1px #666;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 14px;
+            }
+       }
+        >.paging{
+            width: 130px;
+            height: 36px;
+            border: 1px solid #000;
+           >.center {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                margin-right: 30px;
+          }
+       }
+        >.right {
+            margin: 0;
+            padding: 0;
+           >a{
+               margin: 0;
+           }
+       }
+   }
+   >.meau {
+       width: 100%;
+       height: 40px;
+       background: linear-gradient(to bottom,#fff,#eeeeee);
+       padding: 0px 7px;
+       >span {
+           line-height: 40px;
+       }
+   }
+}

@@ -18,7 +18,7 @@
 
     <div class="topbar">
         <a href="../index.html" class="logo"></a>
-        <a href="javascript:" class="app"></a>
+        <a href="http://home.manmanbuy.com/app.aspx" class="app"></a>
     </div>
     <!--搜索框-->
     <div id="searchbar">
@@ -42,7 +42,6 @@
         <div class="container">
             <div class="hot">热门品牌排行</div>
             <ul class="brand-list">
-                <!--<li class="brand-category"><a href="javascript:">平板电视十大品牌1<i class="fa fa-chevron-down"></i></a></li>-->
 
             </ul>
         </div>
@@ -73,7 +72,7 @@
 <script id="brandCategoryTemp" type="text/html">
     {{each result as value i}}
         <li class="brand-category">
-            <a href="brand-list.html?id={{value.brandTitleId}}">{{value.brandTitle}}<i class="fa fa-chevron-down"></i></a>
+            <a href="brand-list.html?id={{value.brandTitleId}}&title={{value.brandTitle}}">{{value.brandTitle}}<i class="fa fa-chevron-down"></i></a>
         </li>
     {{/each}}
 </script>
