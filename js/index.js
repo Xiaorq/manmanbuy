@@ -21,6 +21,7 @@ Mmbuy.prototype = {
                 // console.log(data);
                 var html = template('navTmp',data);
                 $('#nav .mui-container .mui-row').html(html);
+                $("div[data-id='1']>a").attr('href','./html/SaveMoney.html');
                 $("div[data-id='8']").hide();
                 $("div[data-id='9']").hide();
                 $("div[data-id='10']").hide();
