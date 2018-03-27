@@ -16,8 +16,6 @@ Manbuy.prototype = {
             success:function(data){
                 var html = template('catTitleTmp',data);
                 $('.mui-table-view').html(html);
-                console.log(html);
-                
             }
         })
     },
