@@ -4,7 +4,7 @@
 
 # 分工
 - 琪琪负责首页 index.html
-- 马班长、夏琨负责比价搜索 category.html
+- 马班长、夏琨负责比价搜索 category.html,cs-commodity.html
 - 蒙蒙负责省钱控 SavaMoney.html
 - 鹏鹏负责国内折扣海淘折扣 inlanddiscount.html,moneyctrl.html
 - 邓罡负责优惠券 coupon.html
