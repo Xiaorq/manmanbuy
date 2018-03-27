@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- 1. 引入字体图标的样式文件 -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+
+    <!-- 2. 引入mui的样式文件 -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <!-- 引入站点图标 -->
+    <link rel="icon" href="../images/icon-zd.png">
+
+    <link rel="stylesheet/less" href="../less/Piecetogether.less">
+    <script src="../lib/less/less.js"></script>
+    <title>凑单品</title>
+</head>
+
+<body>
+    <!-- 头部开始 -->
+    <header id="header">
+        <a href="../index.html" class="fa fa-chevron-left"></a>
+        <h4>凑单品</h4>
+    </header>
+    <!-- 头部结束 -->
+
+    <!-- 导航栏开始 -->
+    <nav id="nav">
+        <div class="list">
+            <div class="filter">
+
+                <ul>
+                    <li class="shop">
+                        <a href="javascript:;">京东
+                            <i class="fa fa-arrow-circle-down"></i>
+                        </a>
+                    </li>
+                    <li class="area">
+                        <a href="javascript:;">华北
+                            <i class="fa fa-arrow-circle-down"></i>
+                        </a>
+                    </li>
+                    <li class="price2">
+                        <a href="javascript:;">1元
+                            <i class="fa fa-arrow-circle-down"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="selectbar">
+                    <i class="search fa fa-search"></i>
+                </div>
+            </div>
+
+
+            <!--下拉菜单1 -->
+            <div class="container">
+                <div class="popbox shop1">
+                    <ul class="mui-table-view">
+                        <!-- <li class="mui-table-view-cell">京东 </li>
+                        <li class="mui-table-view-cell">一号店 </li>
+                        <li class="mui-table-view-cell">天猫超市</li> -->
+                    </ul>
+
+                </div>
+                <!-- 下拉菜单2 -->
+                <div class="popbox area1">
+                    <ul class="mui-table-view">
+                        <!-- <li class="mui-table-view-cell">
+                            <a href="#">华北（北京、山西等）</a>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <a href="#">华东（山东、浙江等）</a>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <a href="#">华南（广东、广西等）</a>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <a href="#">华中（湖北、河南等） </a>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <a href="#">西南（四川、云南等） </a>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <a href="#">东北（辽宁、吉林等）</a>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <a href="#">西北（宁夏、新疆等） </a>
+                        </li> -->
+                    </ul>
+
+                </div>
+                <!-- 价格下拉菜单3 -->
+                <div class="popbox price1">
+                    <ul class="mui-table-view">
+                        <!-- <li class="mui-table-view-cell">
+                            <a href="#">全部价格</a>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <a href="#">1-3元</a>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <a href="#">3-5元</a>
+                        <!-- </li> -->
+                        <li class="mui-table-view-cell" data-price-id=0>
+                            <a href="#">0-0.5元 </a>
+                        </li>
+                        <li class="mui-table-view-cell" data-price-id=1>
+                            <a href="#">0.5-1元 </a>
+                        </li>
+                        <li class="mui-table-view-cell" data-price-id=2>
+                            <a href="#">全部商品</a>
+                        </li> 
+
+                    </ul>
+
+                </div>
+                <!-- 搜索商品容器 -->
+                <div class="search-select popbox">
+                    <div class="title">
+                        <input type="text" class="fa fa-search" placeholder="搜索你想要的搜单品">
+                        <button class="btn-search">搜索</button>
+                    </div>
+
+                    <!-- 排序 -->
+                    <div class="order clearfix">
+                        <p>排序</p>
+                        <div class="order-type">
+                            <div>
+                                <a href="">销量</a>
+                            </div>
+                            <div>
+                                <a href="" class="fa fa-long-arrow-down">价格</a>
+                            </div>
+                            <div>
+                                <a href="#" class="fa fa-long-arrow-up">价格</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- 分类 -->
+                    <div class="sort clearfix">
+                        <p>分类</p>
+                        <div>
+                            <a href="" class="all">全部</a>
+                        </div>
+                        <div>
+                            <a href="">家居</a>
+                        </div>
+                        <div>
+                            <a href="">办公</a>
+                        </div>
+                        <div>
+                            <a href="">数码</a>
+                        </div>
+                        <div>
+                            <a href="">个护</a>
+                        </div>
+                        <div>
+                            <a href="">食品</a>
+                        </div>
+                        <div>
+                            <a href="">母婴</a>
+                        </div>
+                        <div>
+                            <a href="">服饰</a>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </nav>
+    <!-- 导航栏结束 -->
+    <!-- 主体内容开始 -->
+    <main id="main">
+        <div class="bd">
+
+            <ul class="container">
+                <li class="pruduct">
+                    <a href="#">
+                        <div class="pic">
+                            <img src="http://img14.360buyimg.com/n7/jfs/t10468/27/2509771202/174149/6ea26548/59f8225bN031c1263.jpg" alt="">
+                        </div>
+                        <div class='title'>沃隆 帆布袋，请勿单拍，拍下不发货</div>
+                        <div class='price'>
+                            <i>&yen;</i>0.01</div>
+                    </a>
+                </li>
+                <li class="pruduct">
+                    <a href="#">
+                        <div class="pic">
+                            <img src="http://img14.360buyimg.com/n7/jfs/t10468/27/2509771202/174149/6ea26548/59f8225bN031c1263.jpg" alt="">
+                        </div>
+                        <div class='title'>沃隆 帆布袋，请勿单拍，拍下不发货</div>
+                        <div class='price'>
+                            <i>&yen;</i>0.01</div>
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- <div class="mui-col-xs-6">
+                <div class="pic">
+                    <img src="http://img14.360buyimg.com/n7/jfs/t10468/27/2509771202/174149/6ea26548/59f8225bN031c1263.jpg" alt="">
+                </div>
+                <div class='title'>沃隆 帆布袋，请勿单拍，拍下不发货</div>
+                <div class='price'><i>&yen;</i>1.00</div>
+            </div> -->
+        </div>
+    </main>
+    <script type="text/html" id="popbox-tem">
+        {{each result as value i}}
+
+        <li class="mui-table-view-cell" data-shop-id={{value.shopId}}>{{value.shopName}} </li>
+        {{/each}}
+
+    </script>
+
+    <script type="text/html" id="getgsshoparea">
+        {{each result as value i}}
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell" data-area-id={{value.areaId}}>
+                <a href="#">{{value.areaName}}</a>
+            </li>
+        </ul>
+        {{/each}}
+    </script>
+
+    
+
+    <script type="text/html" id="getgsproduct">
+        {{each result as value i}}
+        {{if value != ""}}
+        <li class="pruduct" data-productId-id={{value.productId}}>
+            <a href="#">
+                <div class="pic">
+                    <img src="{{value.productImg}}" alt="">
+                </div>
+                <div class='title'>{{value.productName}}</div>
+                <div class='price'>
+                    <i></i>{{value.productPrice}}
+                </div>
+            </a>
+        </li>
+        {{/if}}
+        {{/each}}
+    </script>
+
+
+
+    <!-- 1. 引入mui的js文件 -->
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <!-- 2. 引入zepto的js文件 -->
+    <script src="../lib/zepto/zepto.min.js"></script>
+
+    <!-- 3. 引入模板引擎的js文件 -->
+    <script src="../lib/artTemplate/template.js"></script>
+
+    <!-- 4. 引入自己写的js文件  -->
+    <script src="../js/Piecetogether.js"></script>
+</body>
+
+</html>
