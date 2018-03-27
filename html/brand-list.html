@@ -122,10 +122,10 @@
 </script>
 <script id="commentItemTemp" type="text/html">
 <li class="comment-item">
-    <div class="product">
+    <a href="cs-commodity.html?productid={{#$data.product_data.result[0].productId}}" class="product">
         <div class="img">{{#$data.product_data.result[0].productImg}}</div>
         <div class="proName">{{#$data.product_data.result[0].productName}}</div>
-    </div>
+    </a>
     <div class="comment-box">
         <div class="topbar">
             <span class="username">{{$data.comment_data.result[0].comName}}</span>
