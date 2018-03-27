@@ -17,7 +17,7 @@
 
 <body>
     <!-- 侧滑导航根容器 -->
-<div class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+    <div class="mui-off-canvas-wrap mui-draggable mui-slide-in">
         <!-- 菜单容器 -->
         <aside class="mui-off-canvas-left">
             <div class="mui-scroll-wrapper">
@@ -223,7 +223,6 @@
             </li>
         {{/each}}
     </script>
-
     <!-- 分页的模板 -->
     <script id='pageTmp' type="text/html">
             {{each pageNumArr}}
@@ -236,19 +235,14 @@
             <li class="mui-col-xs-4" data-categoryid="{{$value.categoryId}}" ><a href="cs-prolist.html?categoryid={{$value.categoryId}}">{{$value.category}}</a></li>
         {{/each}}
     </script>
-
     <!-- 首页后面的二级目录 -->
     <script id='secTitleTmp' type="text/html">
         <a href="#">{{proName}}</a>
     </script>
-
-
-
     <!-- 导入js -->
     <script  src="../lib/zepto/zepto.min.js"></script>
     <script src="../lib/mui/js/mui.min.js"></script>
     <script src="../lib/artTemplate/template.js"></script>
     <script src="../js/cs-prolist.js"></script>
 </body>
-
 </html>
