@@ -137,6 +137,18 @@ Manbuy.prototype = {
             }
     
         });
+        //给header的a标签添加点击事件
+        mui('.mui-off-canvas-wrap').on('tap', '.back-index', function () {
+            window.location.href = "index.html";
+        });
+        //给返回顶部的a标签添加点击事件
+        mui('.mui-off-canvas-wrap').on('tap', '.back-top', function () {
+            window.scrollTo(0,0);
+            $(window).scrollTop("0");
+            console.log(111);
+            
+        });
+
 
         
         
