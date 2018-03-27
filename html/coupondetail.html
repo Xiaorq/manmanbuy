@@ -28,13 +28,13 @@
 
 <body>
     <!-- 网页顶部 -->
-    <header>
+    <header id="header">
         <div class="left">
             <a href="javascript:history.back(-1)" class="fa fa-arrow-left"></a>
         </div>
         <span>优惠券</span>
         <div class="right">
-            <a href="">
+            <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">
                 <img src="../images/header_app.png" alt="">
             </a>
         </div>
@@ -43,33 +43,22 @@
     <div class="Prompt">--点餐前出示手机中的优惠券，即可享受优惠--</div>
     <main id="main">
         <ul class="clearFix" id="gen">
-            <li>
-                <a href="javascript:void(0);">
-                    <img src="../images/eat.jpg" alt="">
-                    <div class="right">
-                        <span class="fa fa-angle-right"></span>
-                        <h3>C12 分享双人餐 新奥尔良烤鸡腿堡+香辣鸡腿堡+新奥尔良烤翅+薯条(大)+百事可乐(中)+雪顶咖啡 2018年3月凭肯德基优惠券</h3>
-                        <h2>￥65</h2>
-                        <p>有效期至3月31日</p>
-                    </div>
-                </a>
-            </li>
         </ul>
         <!-- 导航 -->
         <div class="nav">
-            <a href="">首页</a>
+            <a href="../index.html">首页</a>
             &nbsp;>&nbsp;
-            <a href="">优惠券</a>
+            <a href="./coupon.html">优惠券</a>
         </div>
     </main>
     <!-- 底部 -->
     <footer id="footer">
         <ul class="clearfloat">
             <li>
-                <a href="#">登录</a>
+                <a href="http://m.manmanbuy.com/login.aspx">登录</a>
             </li>
             <li>
-                <a href="#">注册</a>
+                <a href="http://m.manmanbuy.com/reg.aspx">注册</a>
             </li>
             <li>
                 <a href="#header" class="fa fa-arrow-circle-up">回到顶部</a>
@@ -77,15 +66,15 @@
         </ul>
         <div class="footer-down">
             <p>
-                <a href="../index.html">手机APP下载</a>
-                <a href="#">慢慢买手机版</a> -- 掌上比价平台</p>
+                <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">手机APP下载</a>
+                <a href="../index.html">慢慢买手机版</a> -- 掌上比价平台</p>
             <p> m.manmanbuy.com </p>
         </div>
     </footer>
     <!-- 下载飘动 -->
 
     <div id="download">
-        <a href="">
+        <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">
             <img src="../images/download.png" alt="">
         </a>
     </div>
@@ -100,10 +89,6 @@
             </div>
         </div>
     </div>
-
-
-
-
     <script src="../lib/zepto/zepto.min.js"></script>
     <script src="../lib/swiper/swiper.min.js"></script>
     <script src="../js/coupondetail.js"></script>
@@ -126,15 +111,6 @@
         </a>
     </li>
     {{/each}}
-</script>
-
-<script>
-    $(function () {
-        // var swiper = new Swiper('.swiper-container', {
-        //     initialSlide:0,
-            
-        // });
-    })
 </script>
 <script type="text/html" id="getImg">
     {{each result as value i}}
