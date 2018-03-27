@@ -1,18 +1,17 @@
 # manmanbuy
 慢慢买项目
 
-# 文件名
-比价搜索:category.html
-省钱控: moneyctrl.html
-国内折扣:inlanddiscount.html
-白菜价: baicaijia.html
-海淘折扣: moneyctrl.html
-优惠卷:coupon.html
-查历史价:category.html
-凑单品:gsproduct.html
-口碑排行:category.html
-商城导航:sitenav.html
-品牌大全:brandTitle.html
+
+# 分工
+- 琪琪负责首页 index.html
+- 马班长、夏琨负责比价搜索 category.html
+- 蒙蒙负责省钱控 SavaMoney.html
+- 鹏鹏负责国内折扣海淘折扣 inlanddiscount.html,moneyctrl.html
+- 邓罡负责优惠券 coupon.html
+- 畅姐负责商城导航 sitenav.html
+- 黄智负责 品牌大全十大品牌和商品评论 brandTitle.html
+- 熊熊负责凑单品 gsproduct.html
+- 希希负责白菜价 baicaijia.html
 
 
 # git协作开发
