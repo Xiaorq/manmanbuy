@@ -24,7 +24,7 @@ Coupondetail.prototype = {
             url:'http://mmb.ittun.com/api/getcouponproduct',
             data:{couponid: this.getId("id")},
             success:function(data){
-                console.log(data);
+                // console.log(data);
                 
                 var html = template("getHadCouponTmp",data);
                 $('#main ul').html(html);
