@@ -16,7 +16,7 @@ ProductList.prototype = {
                 $(".product").html(html);
                 //给产品添加点击事件，获取id，
                 $(".product").on('click','.jump',function(){
-                    window.location.href = 'discount-detail.html?productId='+$(this).data('id');
+                    window.location.href = 'inlanddiscount.html?productId='+$(this).data('id');
                 })
             }
         })
