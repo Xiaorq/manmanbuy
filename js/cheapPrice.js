@@ -48,9 +48,9 @@ EasyBuy.prototype={
            type:'get',
            data:{titleid:titleId},
            success:function(data){
-            console.log("#bar_"+i);
-            i++;
-            console.log(i);
+            // console.log("#bar_"+i);
+            // i++;
+            // console.log(i);
             var html=template('productListTmp',data);
             console.log(html);
             // for()

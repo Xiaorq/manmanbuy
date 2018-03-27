@@ -19,7 +19,7 @@
 <body>
     <!-- 头部区域 -->
     <header id="header">
-        <a href="#" class="left fa fa-angle-left"></a>
+        <a href="javascript: history.back(-1)" class="left fa fa-angle-left"></a>
         <h4>省钱控-最新优惠</h4>
         <a href="#" class="right"></a>
     </header>
@@ -80,30 +80,41 @@
     <footer id="footer">
 		  <div class="pager">
                 <div class="left mui-col-xs-2">
-                    <a href="#">上一页</a>
+                    <a href="javescript:;">上一页</a>
                 </div>
                 <div class="paging mui-col-xs-3">
-                    <select class="center"></select>
+                    <select id="center">
+                        <option >1</option>
+                    </select>
                 </div>
                 <div class="right mui-col-xs-2">
-                    <a href="#">下一页</a>
+                    <a href="javescript:;">下一页</a>
                 </div>
           </div>
           <div class="meau">
-              <span>首页</span>
+              <a href="../index.html">首页</a>
               <span>></span>
-              <span>省钱控</span>
+              <a href="SaveMoney.html">省钱控</a>
           </div>
-          <div class="category">
-                <a href="#" class="register">登录</a>
-                <a href="#" class="login">注册</a>
-                <a href="#" class="return">返回顶部</a>
-          </div>
+          <div class="mui-container">
+                <div class="mui-row">
+                    <div class="mui-col-xs-4"><a href="http://m.manmanbuy.com/login.aspx">登录</a></div>
+                    <div class="mui-col-xs-4"><a href="http://m.manmanbuy.com/reg.aspx">注册</a></div>
+                    <div class="mui-col-xs-4"><a href="#top" class="fa fa-arrow-up">返回顶部</a></div>
+                </div>
+            </div>
+            <div id="end">
+                <p class="left">
+                    <span id="appdown">手机APP下载</span>
+                    慢慢买手机版--掌上比价平台
+                </p>
+                <p class="right">m.manmanbuy.com</p>
+            </div>
     </footer>
     <!-- 创建商品模板 -->
     <script type="text/html" id="getSoundsTmp">
         {{each result as value i}}
-        <a href="javascript:;" class="mui-slider-handle mui-clearfix">
+        <a href="javascript:;"  class="mui-slider-handle mui-clearfix" data-id="{{value.productId}}">
             <div class="price-img">
                 {{#value.productImg2}}
             </div>
@@ -115,12 +126,18 @@
                 <div class="other">
                     <span class="mall">{{value.productFrom}} | {{value.productTime}}</span>
                     <span class="comment">
-                        <span class="fa fa-commenting-o" num="{{value.productComCount}}"></span>
-                        0
+                        <span class="fa fa-commenting-o left" data-num="{{value.productComCount}}"></span>
+                        <span class="mui-badge mui-badge-danger">{{value.productComCount}}</span>
                     </span>
                 </div>
             </div>
         </a> 
+        {{/each}}
+    </script>
+    <!-- 创建option模板 -->
+    <script id='optionTmp' type="text/html">
+        {{each arrPage}}
+        <option>{{$value}}/{{totalPage}}</option>
         {{/each}}
     </script>
     <!-- 6.引入mui的js文件 -->
