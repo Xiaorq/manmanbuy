@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买</title>
+    <!-- 引入站点图标 -->
+    <link rel="icon" href="../favicon.ico">
+    <!-- 引入字体图标的样式文件 -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+
+    <!-- 引入minUI的样式文件 -->
+    <link rel="stylesheet" href="../lib/swiper/swiper.min.css">
+
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <!-- 引入less可以直接引入，但是要带入一个/less -->
+    <link rel="stylesheet/less" href="../less/coupondetail.less">
+    <!-- 引入less.js编译器文件（专门在浏览器里面去临时编译less文件）less.js需要在less文件后面引入，但是不能放在body后面 因为less。js是需要编译less文件影响样式 -->
+
+    <script src="../lib/less/less.js"></script>
+    
+
+    <!-- 除非对页面渲染有影响的JS文件，一般的JS文件一般放在body之后 -->
+    <!-- css在head里面引入 -->
+</head>
+
+<body>
+    <!-- 网页顶部 -->
+    <header id="header">
+        <div class="left">
+            <a href="javascript:history.back(-1)" class="fa fa-arrow-left"></a>
+        </div>
+        <span>优惠券</span>
+        <div class="right">
+            <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">
+                <img src="../images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 提示行 -->
+    <div class="Prompt">--点餐前出示手机中的优惠券，即可享受优惠--</div>
+    <main id="main">
+        <ul class="clearFix" id="gen">
+        </ul>
+        <!-- 导航 -->
+        <div class="nav">
+            <a href="../index.html">首页</a>
+            &nbsp;>&nbsp;
+            <a href="./coupon.html">优惠券</a>
+        </div>
+    </main>
+    <!-- 底部 -->
+    <footer id="footer">
+        <ul class="clearfloat">
+            <li>
+                <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+            </li>
+            <li>
+                <a href="http://m.manmanbuy.com/reg.aspx">注册</a>
+            </li>
+            <li>
+                <a href="#header" class="fa fa-arrow-circle-up">回到顶部</a>
+            </li>
+        </ul>
+        <div class="footer-down">
+            <p>
+                <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">手机APP下载</a>
+                <a href="../index.html">慢慢买手机版</a> -- 掌上比价平台</p>
+            <p> m.manmanbuy.com </p>
+        </div>
+    </footer>
+    <!-- 下载飘动 -->
+
+    <div id="download">
+        <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">
+            <img src="../images/download.png" alt="">
+        </a>
+    </div>
+    <div id="mask">
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="../images/bcj-slider-1.jpg" alt="" width="200">
+                </div>
+                <div class="swiper-slide">Slide 2</div>
+            </div>
+        </div>
+    </div>
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/swiper/swiper.min.js"></script>
+    <script src="../js/coupondetail.js"></script>
+    <script src="../lib/artTemplate/template.js"></script>
+</body>
+
+</html>
+<script type="text/html" id="getHadCouponTmp">
+    {{each result as value i}}
+    <li>
+        <a href="javascript:void(0);" data-imgid='{{value.couponProductId}}' >
+
+            {{#value.couponProductImg}}
+            <div class="right">
+                <span class="fa fa-angle-right"></span>
+                <h3>{{value.couponProductName}}</h3>
+                <h2>{{value.couponProductPrice}}</h2>
+                <p>{{value.couponProductTime}}</p>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script type="text/html" id="getImg">
+    {{each result as value i}}
+    <div class="swiper-slide">
+        {{#value.couponProductImg}}
+    </div>
+    {{/each}}
+    
+</script>

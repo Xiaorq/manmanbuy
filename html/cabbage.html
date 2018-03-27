@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买官网</title>
+
+    <!-- 1.引包先引出第三方的包 如果有依赖要先引入一来在引入不依赖 -->
+    <!-- 样式再head里面引入 -->
+
+    <!-- 1.引入字体图标的样式文件 -->
+    <link rel="stylesheet" href="./../lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 2.引入mui的样式文件 -->
+
+    <link rel="stylesheet" href="./../lib/mui/css/mui.min.css">
+
+    <!-- 引入less.js编译器文件(专门在浏览器里面去临时编译less) less.js需要在less文件后面引入 但是不能放在body后面
+    因为less.js是需要编译less来生成css会影响页面渲染-->
+    <link rel="stylesheet/less" href="./../less/cabbage.less">
+    <script src="../lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header id="header">
+        <div class="mui-content">
+            <div class="mui-row">
+                <div class="mui-col-sm-1">
+                    <div class="mui-table-view-cell">
+                        <a href="#" class="fa fa-angle-left"></a>
+                    </div>
+                </div>
+                <div class="mui-col-sm-9">
+                    <div class="mui-table-view-cell">
+                        白菜价-淘宝内部劵
+                    </div>
+                </div>
+                <div class="mui-col-sm-2">
+                    <div class="mui-table-view-cell">
+                        <a href="#">
+                            <img src="./../images/header_app.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 侧滑导航根容器 -->
+    <div class="nav">
+        <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+            <div class="mui-scroll">
+                <a class="mui-control-item mui-active">
+                    全部
+                </a>
+                <a class="mui-control-item">
+                    热销
+                </a>
+                <a class="mui-control-item">
+                    9块邮
+                </a>
+                <a class="mui-control-item">
+                    19块邮
+                </a>
+                <a class="mui-control-item">
+                    娱乐
+                </a>
+                <a class="mui-control-item">
+                    科技
+                </a>
+            </div>
+        </div>
+    </div>
+<div class="main">
+    <div class="product">
+        <div class="mui-content">
+            <div class="mui-row">
+                <div class="mui-col-sm-4 mui-col-xs-4">
+                    <div class="mui-table-view-cell">
+                        <a href="#">
+                            <img src="./../images/bcj-slider-1.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="mui-col-sm-8 mui-col-xs-8">
+                    <div class="mui-table-view-cell">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <!-- js在body结束标签的上面引入 -->
+    <!-- 3. 引入mui的js文件 -->
+    <script src="./../lib/mui/js/mui.min.js"></script>
+    <!-- 4. 引入zepto的js文件 -->
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <!-- 5. 引入模板引擎的js文件 -->
+    <script src="../lib/artTemplate/template.js"></script>
+    <!-- 引入animate的css -->
+    <link rel="stylesheet" href="./../lib/animate/animate.min.css">
+    <!-- 6. 引入自己写的js文件  -->
+    <script src="../js/mall-nav.js"></script>
+</body>
+
+</html>
+<script>
+</script>

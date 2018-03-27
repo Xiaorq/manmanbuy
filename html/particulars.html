@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>买一买看一看拉</title>
+    <!-- 1.引入站点图标 -->
+    <link rel="icon" href="../images/favicon.ico">
+    <!-- 2.引入字体图标的样式文件 -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 3.引入mui的样式文件 -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <!-- 4.引入less样式文件 -->
+    <link rel="stylesheet/less" href="../less/particulars.less">
+    <!-- 5.引入less.js编译器文件 -->
+    <script src="../lib/less/less.js"></script>
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="javascript: history.back(-1)" class="left fa fa-angle-left"></a>
+        <h4>详情页面</h4>
+        <a href="#" class="right"></a>
+    </header>
+    <!-- 模板需要一个大盒子包着 -->
+    <div class="numM">
+    </div>
+    <!-- 创建模板引擎 -->
+    <script type="text/html" id="particularsTmp">
+        {{each result as value i}}
+        <!-- 主体区域 -->
+        <main id="main">
+            <div class="sounds">
+                <div class="mui-slider-handle mui-clearfix">
+                    <div class="price-name">
+                        {{value.productName}}
+                    </div>
+                    <div class="price">
+                        {{value.productPinkage}}
+                    </div>
+                    <div class="other">
+                        <span class="mall">{{value.productFrom}} | {{value.productTime}} &nbsp;{{value.productTips}}</span>
+                    </div>
+                    <div class="res">
+                        {{value.productComCount}}
+                    </div>
+                    <div class="mui-media-body">
+                        <div class="particulars">
+                            {{#value.productImg2}}
+                            {{value.productInfo2}}
+                        </div>
+                        <div class="special"> 
+                            {{value.productInfo}}
+                        </div>
+                        <div class="other">
+                            <div class="price-img">
+                                {{#value.productImgSm}}
+                            </div>
+                        </div>
+                        <a class="mui-btn mui-btn-warning mui-btn-outlined fa fa-shopping-cart">立即登录</a>
+                        <div class="mom">
+                            {{#value.productComment}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        {{/each}}
+    </script>
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="meau">
+            <a href="index.html">首页</a>
+            <span>></span>
+            <a href="http://m.manmanbuy.com/reg.aspx">注册</a>
+            <span>></span>
+            <a href="#">限地区：荆楚大地 南方大米 长粒米 优质籼米 5KG</a>
+        </div>
+        <div id="end">
+            <p class="left">
+                <span id="appdown">手机APP下载</span>
+                慢慢买手机版--掌上比价平台
+            </p>
+            <p class="right">m.manmanbuy.com</p>
+        </div>
+    </footer> 
+    <div id="footers">
+        <div class="mui-row">
+            <div class="mui-col-xs-4 top"><a href="#" class="fa fa-commenting-o"><span>评论</span></a></div>
+            <div class="mui-col-xs-8 buttom"><a href="https://detail.tmall.com/item.htm?id=555610367452&ali_trackid=2:mm_33126501_9776181_62148860:1522113791_213_1494882995&pvid=10_183.135.4.66_854_1522112195011" class="fa fa-shopping-cart"><span>前往购买</span></a></div>
+        </div>
+        <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile" class="mai">
+            <img src="https://img.alicdn.com/imgextra/i2/379516416/TB2WepTeb1J.eBjSszcXXbFzVXa_!!379516416.png" alt="">
+        </a>
+    </div>
+    <!-- 6.引入mui的js文件 -->
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <!-- 7.引入zepto的js文件 -->
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <!-- 8.引入模板引擎的js文件 -->
+    <script src="../lib/artTemplate/template.js"></script>
+    <!-- 9.引入自己的写的js文件(自己写的js必须最后引入) -->
+    <script src="../js/particulars.js"></script>
+</body>
+</html>

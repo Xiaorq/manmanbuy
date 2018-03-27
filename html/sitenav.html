@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买官网</title>
+
+    <!-- 1.引包先引出第三方的包 如果有依赖要先引入一来在引入不依赖 -->
+    <!-- 样式再head里面引入 -->
+
+    <!-- 1.引入字体图标的样式文件 -->
+    <link rel="stylesheet" href="./../lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 2.引入mui的样式文件 -->
+
+    <link rel="stylesheet" href="./../lib/mui/css/mui.min.css">
+
+    <!-- 引入less.js编译器文件(专门在浏览器里面去临时编译less) less.js需要在less文件后面引入 但是不能放在body后面
+    因为less.js是需要编译less来生成css会影响页面渲染-->
+    <link rel="stylesheet/less" href="./../less/mall-nav.less">
+    <script src="../lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header id="header">
+        <div class="mui-content">
+            <div class="mui-row">
+                <div class="mui-col-sm-1">
+                    <div class="box">
+                        <a href="javascript: history.back(-1)" class="fa fa-angle-left"></a>
+                    </div>
+                </div>
+                <div class="mui-col-sm-9">
+                    <div class="box">
+                        商城导航
+                    </div>
+                </div>
+                <div class="mui-col-sm-2">
+                    <div class="box">
+                        <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia">
+                            <img src="./../images/header_app.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 主体内容 -->
+    <main id="main" class="mui-clearfix">
+        <!-- <div class="sites">
+            <a href="#">
+                <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt=""> 京东商城
+            </a>
+        </div> -->
+        
+  
+    </main>
+    <!-- 底部 -->
+    <footer id="footer">
+        <div class="bottom">
+            <a href="./../index.html">首页</a>>
+            <a href="./sitenav.html">商城导航</a>
+        </div>
+        <div class="mui-content">
+            <div class="mui-row">
+                <div class="mui-col-sm-4">
+                    <div class="mui-table-view-cell">
+                        <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+                    </div>
+                </div>
+                <div class="mui-col-sm-4">
+                    <div class="mui-table-view-cell">
+                        <a href="http://m.manmanbuy.com/reg.aspx">注册</a>
+                    </div>
+                </div>
+                <div class="mui-col-sm-4">
+                    <div class="mui-table-view-cell">
+                        <a href="#" class="fa fa-arrow-up">返回顶部</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="website">
+            <a href="http://m.manmanbuy.com/reg.aspx">手机APP下载</a><span>慢慢买手机版一</span><i>掌上比价平台</i>
+            <p>
+             m.manmanbuy.com  </p>
+        </div>
+    </footer>
+    <!-- js在body结束标签的上面引入 -->
+    <!-- 3. 引入mui的js文件 -->
+    <script src="./../lib/mui/js/mui.min.js"></script>
+    <!-- 4. 引入zepto的js文件 -->
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <!-- 5. 引入模板引擎的js文件 -->
+    <script src="../lib/artTemplate/template.js"></script>
+    <!-- 引入animate的css -->
+    <link rel="stylesheet" href="./../lib/animate/animate.min.css">
+    <!-- 6. 引入自己写的js文件  -->
+    <script src="../js/mall-nav.js"></script>
+
+</body>
+
+</html>
+<!-- 制作图片模板 -->
+<script type="text/html" id="web">
+    {{each result as value i}}
+
+    <div class="sites zoomIn animated">
+        <a href="{{value.navHref}}">
+            <img src="{{value.navImg}}" alt=""><span>{{value.navTitle}}</span> 
+        </a>
+    </div>
+    {{/each}}    
+</script>

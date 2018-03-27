@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 添加移动端视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的慢慢买首页</title>
+    <!-- 1. 引入站点图标 -->
+    <link rel="icon" href="./favicon.ico">
+    <!-- 2.引入字体图标的样式库 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 3. 引入mui的样式文件 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <!-- 引入less -->
+    <link rel="stylesheet/less" href="./less/index.less">
+    <!-- 引入less.js编译器文件 专门在浏览器里面去临时编译less -->
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+    <header id="header" class="clearfix">
+        <!-- 头部logo -->
+        <div class="logo">
+            <a href="./index.html">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <!-- app下载 -->
+        <div class="appdown">
+            <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 搜索框 -->
+    <section id="searchbox">
+        <form class="search">
+            <input type="text" placeholder="请输入你想比价的商品" class="searchtxt">
+            <input type="submit" class="searchbtn" value="搜索">
+        <form>
+    </section>
+    <main id="main">
+        <!-- 导航块 -->
+        <nav id="nav">
+            <div class="mui-container">
+                <div class="mui-row"></div>
+            </div>
+        </nav>
+        <section id="rebate">
+            <div class="rebate-title">
+                <span>超值折扣推荐</span>
+                <a href="javascript:;" class="  fa fa-arrow-circle-o-right"></a>
+            </div>
+        </section>
+        <!-- 商品模块 -->
+        <section id="product">
+            <div class="mui-container">
+
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <section id="more">
+            <a href="./html/SaveMoney.html">更多优惠信息>></a>
+        </section>
+        <section id="brand">
+            <div class="brand-title">
+                <span>品牌排行</span>
+                <a href="javascript:;" class="  fa fa-arrow-circle-o-right"></a>
+            </div>
+        </section>
+        <div class="mui-container">
+            <div class="mui-row">
+                <div class="mui-col-xs-3">
+                    <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+                </div>
+                <div class="mui-col-xs-3">
+                    <a href="http://m.manmanbuy.com/reg.aspx">注册</a>
+                </div>
+                <div class="mui-col-xs-6">
+                    <a href="#" class="fa fa-arrow-up">返回顶部</a>
+                </div>
+            </div>
+        </div>
+        <div id="end">
+            <p>
+                <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile" id="appdown">手机APP下载</a>
+                慢慢买手机版--掌上比价平台
+            </p>
+            <a href="http://m.manmanbuy.com">
+                <p>m.manmanbuy.com</p>
+            </a>
+        </div>
+    </footer>
+    <!-- <div id="download">
+        <img src="./images/download.png" alt="">
+        <a href="#" class="fa fa-arrow-circle-up"></a>
+    </div> -->
+    <!-- 导航块的模板引擎 -->
+    <script type="text/html" id="navTmp">
+        {{each result as value i}}
+        <div class="mui-col-xs-3" data-id="{{value.indexmenuId}}">
+            <a href="./html/{{value.titlehref}}">
+                {{#value.img}}
+                <p>{{value.name}}</p>
+            </a>
+        </div>
+        {{/each}}
+    </script>
+    <!-- 商品栏的模板引擎 -->
+    <script type="text/html" id="productTmp">
+        {{each result as value i}}
+        <a href="./html/particulars.html?id={{value.productId}}" class="mui-row" data-id="{{value.productId}}">
+            <div class="left">
+                {{#value.productImg2}}
+            </div>
+            <div class="right">
+                <p>{{value.productName}}
+                    <span>{{value.productPinkage}}包邮(需用劵)</span>
+                </p>
+                <p class="productTime">{{value.productFrom}}&nbsp;|&nbsp;{{value.productTime}}
+                    <span class="fa fa-commenting-o">{{value.productComCount}}</span>
+                </p>
+                <span></span>
+            </div>
+
+        </a>
+        {{/each}}
+    </script>
+    <!-- 引入mui的js文件 -->
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <!-- 引入zepto的js文件 -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板引擎的js文件 -->
+    <script src="./lib/artTemplate/template.js"></script>
+    <!-- 引入自己写的js文件 -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

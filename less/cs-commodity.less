@@ -1,0 +1,267 @@
+@bgcolor:#ff841d;
+html,body{
+	height: 100%;
+}
+img {
+    vertical-align: middle;
+}
+
+i{ font-style:normal}
+*{
+    margin: 0;
+    padding: 0;
+}
+a {
+    color:#333333;
+}
+
+ol,ul {
+    list-style:none;
+}
+// 中间的部分
+#main{
+    // 电视机的详情
+    #television {
+        .nav {
+            border-top: 1px solid #ccc;
+            background-color:#ebebeb;
+            line-height:36px;
+            padding-left: 8px;
+            border-bottom: 1px solid #ccc;
+            a {
+                color:#5a5a5a; 
+            }
+    }
+    // 电视的图片的详情
+    .detail-head {
+        height: auto;
+        padding: 10px 10px 0px 10px;
+        background-color:#ffffff;
+        .pic {
+        position:relative;
+        text-align: center;
+        >img{
+        max-height: 150px;
+        }
+        .a-fav {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        >img {
+        width: 39px;
+        height: 39px;
+            }
+            }
+            }
+        .tit {
+        .haixin{
+        font-size: 16px;
+            }
+            }
+        .mui-row {
+        margin-top:10px;
+        div {
+        font-size: 14px;
+        color: #ccc;
+            }
+        }
+    }
+    }
+    // 产品的详情
+    #particulars {
+        .mui-content {
+        .mui-slider {
+        .mui-row {
+        a {
+        .mui-btn-warning {
+        width: 100%;
+            }  
+            }
+            } 
+    .mui-slider-group {
+        height: 1000px;
+        .mui-active{
+        height: 100%;
+        .mui-scroll-wrapper{
+        height: 100%;
+        .mui-scroll {
+        height: 100%;
+        .c-comment {
+        h4 {
+        text-align: center;
+        background-color: #ccc;
+        height: 40px;
+        line-height: 40px;
+        color:#000000;
+            }
+        .c-network {
+        padding: 0px 10px;
+        .mui-row {
+        border-bottom: 1px solid #ccc;
+        margin-top: 10px;
+        .c-right {
+        padding-left: 10px;
+                }
+        i  {
+        color:#ff8606;
+                }
+        .mui-col-xs-6{
+        margin-bottom: 10px;
+                                        
+                      }  
+                     }
+                 }
+             }
+          }
+      }
+    }
+    }  
+    // 产品参数
+    #item2mobile{
+        h4 {
+        padding-left: 20px;
+    }
+}
+//优先评价
+    #item3mobile {
+        #scroll3 {
+        .mui-scroll {
+        .you-content{
+         .annuity{
+        display: flex;
+        justify-content: space-around;
+        background-color:white;
+        button{
+        display:inline-block;
+        border: 0px;
+        color:white;
+        &:hover{
+            background-color:orange;
+            // border-bottom: 1px solid red;
+        }
+        i{
+            color: #000;
+            font-size: 16px;
+            font-weight:bold;
+        }
+                }
+                }
+        .content{
+            display:none;
+            h4{
+                text-align: center;
+                font-size: 14px;
+                color: #5a5a5a;
+                height: 40px;
+                line-height: 40px;
+                background-color: #ccc;
+            }
+            .z-commodity {
+                height: 40px;
+                line-height: 40px;
+                a{
+                    padding: 0px 10px;
+                    >img{
+                        width: 20px;
+                        height: 20px;
+                    }
+                   span{
+                      float:right;
+                      .x{
+                          padding-left: 10px;
+                          color: red;
+                      }
+                      .y{
+                          background-color: red;
+                        //   color: red;
+                      }
+                    }
+                }
+            }
+        }
+        .content.active{
+            display:block;
+        }
+    }
+    
+        
+    } 
+    }
+    }
+    }  
+    }
+    }
+}
+
+// 准备给评论的商品图片设置宽高
+// .p_pic {
+//     >img{
+//         width: 10px;
+//     }
+// }
+
+// 头部
+#header {
+    height: 51px;
+    background-color: @bgcolor;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+    img.logo {
+        width: 185.5px;
+    }
+    img.app {
+        width: 34px;
+    }
+}
+// 搜索
+#searchBar {
+    height: 51px;
+    background-color: #fff;
+    padding:8px 10px;
+    position: relative;
+    >input {
+        margin-bottom: 0px;
+        height: 33px;
+        border-radius: 17px;
+    }
+    >button {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        border-radius: 17px;
+        background-color: @bgcolor;
+        border:1px solid @bgcolor;
+        color:#fff;
+    }
+}
+// 底部
+#footer {
+    padding:0px 10px;
+    .foot-top {
+        margin-top: 30px;
+        width: 100%;
+        a  {
+            text-align: center;
+            display:inline-block;
+            height: 34px;
+            background-color: #f2f2f2;
+            font-size: 14px;
+            border: 1px solid #888;
+            line-height: 34px;
+            border-radius: 17px;
+            &:hover {
+                background-color: #2222;
+            }
+            img {
+                vertical-align: middle;
+            }
+        }
+    }
+    .foot-bottom {
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+

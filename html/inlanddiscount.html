@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>国内折扣页面</title>
+    <!-- 1. 添加移动端的视口 -->
+    <!-- meta:vp +tab -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    <!-- 1. 引包先引入第三方的包  如果有依赖要先引入依赖再引入不依赖 -->
+    <!-- 1. 引入字体图标的样式文件 -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 2. 引入mui的样式文件 -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <!-- 1. 引入less的时候可以直接引入 但是rel="stylesheet/less" -->
+    <link rel="stylesheet/less" href="../less/discount-productlist.less">
+    <!-- 2. 引入less.js编译器文件 （专门在浏览器里面去临时编译less）  less.js需要在less文件后面引入 但是不能放在body后面 因为less.js是需要编译less来生成css会影响页面渲染 -->
+    <!-- 引入懒加载插件css -->
+    <!-- <link rel="stylesheet" href="../lib/zepto/dropload.css"> -->
+    <!-- js通常是放在body结束标签的上面 但是有一些js要放到head里面（对页面渲染有影响） -->
+    <script src="../lib/less/less.js"></script>
+</head>
+    
+<body>
+        <header>
+            <div class="left">
+                <a href="javascript :history.back(-1)"  class="fa fa-arrow-left"></a>
+            </div>
+            <span>国内折扣</span>
+            <div class="right"><a href="javascript:;"><img src="../images/header_app.png" alt=""></a></div>
+        </header>
+        <!-- 主体商品开始 -->
+        <main id="main">
+            <div class="productList">
+                <div class="mui-row product lists">
+                    <!-- <div class="mui-col-xs-6">
+                        <a href="#" title="聚休闲零食小吃 黄油饼干糕点点心 11.9元" data-id="1">
+                            <div class="img"><img src="../images/discoundt-productlist-01.jpg" alt=""></div>
+                            <div class="title">聚休闲零食小吃 黄油饼干糕点点心黄油饼干糕点点心黄油饼干糕点点心</div>
+                            <div class="subit">11.9元</div>
+                            <div class="info">
+                                <div class="mall">天猫商城 | 2018/3/25 10:15</div>
+                            </div>
+                        </a>
+                    </div>--> 
+                </div>
+            </div>
+        </main>
+        <!-- 主体商品结束 -->
+        <!-- 底部开始 -->
+        <footer id="footer">
+            <ul class="clearfloat">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li><a href="#header">回到顶部</a></li>
+            </ul>
+            <div class="footer-down">
+                <p><a href="#">手机APP下载</a><a href="#">慢慢买手机版</a> -- 掌上比价平台</p>
+                <p> m.manmanbuy.com </p>
+            </div>
+        </footer>
+        <!-- 底部结束 -->
+
+        <!-- 创建产品模板开始 -->
+        <script type="text/html" id="productList">
+            {{each result as value i}}
+                <div class="mui-col-xs-6 item">
+                    <a href="javascript:;" title="{{value.productName}}" data-id="{{value.productId}}" class="jump">
+                        <div class="img">
+                            {{#value.productImg}}
+                        </div>
+                        <div class="title">{{value.productInfo}}</div>
+                        <div class="subit">{{value.productPrice}}</div>
+                        <div class="info">
+                            <div class="mall">{{value.productFrom}} | {{value.productTime}}</div>
+                        </div>
+                    </a>
+                </div>
+            {{/each}}    
+        </script>
+       
+        <!-- 创建产品模板结束 -->
+    
+    
+   
+    <!-- js在body结束标签的上面引入 -->
+    <!-- 3. 引入mui的js文件 -->
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <!-- 4. 引入zepto的js文件 -->
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <!-- 5. 引入模板引擎的js文件 -->
+    <script src="../lib/artTemplate/template.js"></script>
+    <!-- 引入懒加载插件的js文件 -->
+    <!-- <script src="../lib/zepto/dropload.min.js"></script> -->
+    <!-- 6. 引入自己写的js文件  -->
+    <script src="../js/discount-productlist.js"></script>
+</body>
+
+</html>

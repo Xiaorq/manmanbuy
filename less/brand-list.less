@@ -1,0 +1,117 @@
+@import 'brand-base.less';
+
+#main {
+  > .mui-scroll {
+    > .container {
+      > section {
+        > .topbar {
+          background-color: @c;
+          color: #fff;
+          height: 36px;
+          line-height: 36px;
+          //padding-left: 10px;
+          text-align: center;
+          border-bottom: 1px solid #eee;
+        }
+      }
+      // 品牌排行
+      > .brand-sort {
+
+        > .brand-sortList {
+          > .brand-item {
+            padding: 20px 10px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            > .left {
+              float: left;
+              flex-basis: 20px;
+              width: 20px;
+              height: 20px;
+              background-color: #aaa;
+              color: #fff;
+              text-align: center;
+            }
+            &:nth-child(1) > .left {
+              background-color: #f00;
+            }
+            &:nth-child(2) > .left {
+              background-color: #ff9314;
+            }
+            &:nth-child(3) > .left {
+              background-color: #8adf5b;
+            }
+            > .right {
+              flex: 1;
+              margin-left: 10px;
+              > .brand-info {
+                color: #888;
+              }
+              &::before {
+                float: right;
+                line-height: 40px;
+                color: #ddd;
+              }
+            }
+
+          }
+        }
+      }
+      // 产品销量排行
+      > .product-sort {
+        > .product-sortList {
+          > .product-item {
+            padding: 5px 10px;
+            > .left {
+              width: 100px;
+              float: left;
+            }
+            > .right {
+              margin-left: 100px;
+              padding: 5px 10px;
+              .price {
+                color: #f00;
+              }
+              > .footer {
+                color: #888;
+              }
+            }
+          }
+        }
+      }
+      // 评论
+      > .comment {
+        > .comment-list {
+          > .comment-item {
+            padding: 10px;
+            > .product {
+              padding: 10px 0;
+              display: flex;
+              align-contents: center;
+              justify-content: space-between;
+              >.img {
+                flex-basis: 80px;
+              }
+              >.proName {
+                padding: 0 10px;
+                flex: 1;
+                display: flex;
+                align-items: center;
+              }
+            }
+            > .comment-box {
+              background-color: #efefef;
+              padding: 5px 10px;
+              >.topbar {
+                display: flex;
+                justify-content: space-between;
+                >span {
+                  padding: 4px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
