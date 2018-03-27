@@ -81,8 +81,7 @@ Manbuy.prototype = {
         mui('.mui-inner-wrap').on('tap', 'a.product-list', function () {
             // console.log(111);
             var productid =$(this).data('productid');
-            window.location.href = "cs-commodity.html?productid=" + productid+'&proName='+proName;
-            
+            window.location.href = "cs-commodity.html?productid=" + productid+'&proName='+proName; 
         });
         //给span添加tap监听事件
         mui('.mui-inner-wrap').on('tap', 'span.fa-filter', function () {
@@ -139,13 +138,14 @@ Manbuy.prototype = {
         });
         //给header的a标签添加点击事件
         mui('.mui-off-canvas-wrap').on('tap', '.back-index', function () {
-            window.location.href = "index.html";
+            window.location.href = "../index.html";
         });
         //给返回顶部的a标签添加点击事件
         mui('.mui-off-canvas-wrap').on('tap', '.back-top', function () {
-            window.scrollTo(0,0);
-            $(window).scrollTop("0");
-            console.log(111);
+            // window.scrollTo(0,0);
+            
+            // $(window).scrollTop(0,0);
+            // console.log(111);
             
         });
 
