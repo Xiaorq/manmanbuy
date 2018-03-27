@@ -80,7 +80,7 @@
     <footer id="footer">
 		  <div class="pager">
                 <div class="left mui-col-xs-2">
-                    <a href="javescript:;">上一页</a>
+                    <a href="#">上一页</a>
                 </div>
                 <div class="paging mui-col-xs-3">
                     <select id="center">
@@ -88,7 +88,7 @@
                     </select>
                 </div>
                 <div class="right mui-col-xs-2">
-                    <a href="javescript:;">下一页</a>
+                    <a href="#">下一页</a>
                 </div>
           </div>
           <div class="meau">
@@ -136,8 +136,8 @@
     </script>
     <!-- 创建option模板 -->
     <script id='optionTmp' type="text/html">
-        {{each arrPage}}
-        <option>{{$value}}/{{totalPage}}</option>
+        {{each arrPage as value i}}
+        <option value="{{i+1}}">{{value}}/{{totalPage}}</option>
         {{/each}}
     </script>
     <!-- 6.引入mui的js文件 -->

@@ -32,6 +32,7 @@ Manmanbuy.prototype = {
                 
                 // 分页效果
                 function page() {
+                    const that = this;
                     var totalCount = data.totalCount;
                     var totalPage = Math.ceil(totalCount/10);
                     // console.log(totalPage);
@@ -60,6 +61,7 @@ Manmanbuy.prototype = {
                                 console.log(data);
                                 var html = template('getSoundsTmp',data);
                                 $('#main .sounds').html(html);
+                                that.pageid = pageid;
                             }
                         })
                     })
@@ -76,24 +78,29 @@ Manmanbuy.prototype = {
         var that = this;               
         var value = $("#center").val();
         var totalPage = Number(value.split('/')[1]); 
+        var totalPageup;
+        // console.log(totalPage);
         // previous page
         $("#footer .pager .left a").on("click",function(){
             // 计算页数
             // 计算上一页
             that.pageid = that.pageid <= 1? totalPage:that.pageid-1;
+            
             // 渲染
-            console.log(that.pageid);  
+            // console.log(that.pageid);  
             $.ajax({
                 dataType:'json',
                 url:'http://mmb.ittun.com/api/getmoneyctrl',
                 data:{
-                    pageid:1,
+                    pageid:that.pageid,
                     pagesize:10,
                 },
                 success:function(data){
                     console.log(data);
                     var html = template('getSoundsTmp',data);
                     $('#main .sounds').html(html);
+                    $('#center').val(that.pageid);
+                    
                 }
             })                      
         });
@@ -102,19 +109,24 @@ Manmanbuy.prototype = {
             // 计算页数
             // 计算下一页
             that.pageid = that.pageid >= 15? 1:that.pageid+1;
+            
+            
             // 渲染
-            console.log(that.pageid); 
+            // console.log(that.pageid);
             $.ajax({
                 dataType:'json',
                 url:'http://mmb.ittun.com/api/getmoneyctrl',
                 data:{
-                    pageid:1,
+                    pageid:that.pageid,
                     pagesize:10,
                 },
                 success:function(data){
                     console.log(data);
+                    console.log(that.pageid);
                     var html = template('getSoundsTmp',data);
                     $('#main .sounds').html(html);
+                    $('#center').val(that.pageid);
+                    
                 }
             }) 
         });
@@ -126,12 +138,6 @@ Manmanbuy.prototype = {
     },
 }
 
-function tap() {
-    $("#main .sounds .comment .mui-badge").hide();
-    $("#main .sounds .comment .left").mouseover(function(){
-        $("#main .sounds .comment .mui-badge").show();
-    })
-}
 
 
 
