@@ -81,8 +81,7 @@ Manbuy.prototype = {
         mui('.mui-inner-wrap').on('tap', 'a.product-list', function () {
             // console.log(111);
             var productid =$(this).data('productid');
-            window.location.href = "cs-commodity.html?productid=" + productid+'&proName='+proName;
-            
+            window.location.href = "cs-commodity.html?productid=" + productid+'&proName='+proName; 
         });
         //给span添加tap监听事件
         mui('.mui-inner-wrap').on('tap', 'span.fa-filter', function () {
