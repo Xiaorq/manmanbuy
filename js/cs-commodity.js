@@ -14,7 +14,7 @@ $(function(){
 //    mui的警告框
 
 //   获取二级的导航的名字
-  firstName= shangpin.getQueryString("proName");
+  firstName= shangpin.getQueryString("proName")||"品牌大全";
    
    
 })
