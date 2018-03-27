@@ -21,25 +21,28 @@
 
 <body>
     <header id="header" class="clearfix">
+        <!-- 头部logo -->
         <div class="logo">
             <a href="#">
                 <img src="./images/header_logo.png" alt="">
             </a>
         </div>
+        <!-- app下载 -->
         <div class="appdown">
             <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">
                 <img src="./images/header_app.png" alt="">
             </a>
         </div>
     </header>
+    <!-- 搜索框 -->
     <section id="searchbox">
         <form class="search">
             <input type="text" placeholder="请输入你想比价的商品" class="searchtxt">
             <input type="submit" class="searchbtn" value="搜索">
-            <form>
+        <form>
     </section>
     <main id="main">
-        
+        <!-- 导航块 -->
         <nav id="nav">
             <div class="mui-container">
                 <div class="mui-row"></div>
@@ -51,6 +54,7 @@
                 <a href="javascript:;" class="  fa fa-arrow-circle-o-right"></a>
             </div>
         </section>
+        <!-- 商品模块 -->
         <section id="product">
             <div class="mui-container">
 
@@ -82,10 +86,12 @@
         </div>
         <div id="end">
             <p>
-                <span id="appdown">手机APP下载</span>
+                <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile" id="appdown">手机APP下载</a>
                 慢慢买手机版--掌上比价平台
             </p>
-            <p>m.manmanbuy.com</p>
+            <a href="m.manmanbuy.com">
+                <p>m.manmanbuy.com</p>
+            </a>
         </div>
     </footer>
     <!-- <div id="download">
@@ -106,7 +112,7 @@
     <!-- 商品栏的模板引擎 -->
     <script type="text/html" id="productTmp">
         {{each result as value i}}
-        <a href="./html/inlanddiscount.html?id={{value.productId}}" class="mui-row" data-id="{{value.productId}}">
+        <a href="./html/particulars.html?id={{value.productId}}" class="mui-row" data-id="{{value.productId}}">
             <div class="left">
                 {{#value.productImg2}}
             </div>
