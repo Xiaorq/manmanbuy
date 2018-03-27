@@ -59,15 +59,15 @@ Manmanbuy.prototype = {
                             success:function(data){
                                 console.log(data);
                                 var html = template('getSoundsTmp',data);
-                                    $('#main .sounds').html(html);
+                                $('#main .sounds').html(html);
                             }
                         })
                     })
                 }
                 page();
 
-                
                 this.pageup();
+                
             }
         })
     },
@@ -82,7 +82,20 @@ Manmanbuy.prototype = {
             // 计算上一页
             that.pageid = that.pageid <= 1? totalPage:that.pageid-1;
             // 渲染
-            console.log(that.pageid);                        
+            console.log(that.pageid);  
+            $.ajax({
+                dataType:'json',
+                url:'http://mmb.ittun.com/api/getmoneyctrl',
+                data:{
+                    pageid:1,
+                    pagesize:10,
+                },
+                success:function(data){
+                    console.log(data);
+                    var html = template('getSoundsTmp',data);
+                    $('#main .sounds').html(html);
+                }
+            })                      
         });
         // previous page
         $("#footer .pager .right a").on("click",function(){
@@ -90,7 +103,20 @@ Manmanbuy.prototype = {
             // 计算下一页
             that.pageid = that.pageid >= 15? 1:that.pageid+1;
             // 渲染
-            console.log(that.pageid);                        
+            console.log(that.pageid); 
+            $.ajax({
+                dataType:'json',
+                url:'http://mmb.ittun.com/api/getmoneyctrl',
+                data:{
+                    pageid:1,
+                    pagesize:10,
+                },
+                success:function(data){
+                    console.log(data);
+                    var html = template('getSoundsTmp',data);
+                    $('#main .sounds').html(html);
+                }
+            }) 
         });
     },
     particulars:function(){
